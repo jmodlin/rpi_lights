@@ -89,4 +89,4 @@ if __name__ == '__main__':
         print (' > 50 ms ')
         c = Color(255, 0, 255)
         stacker(strip, c, 50)
-        clear()
+        clear(strip)
