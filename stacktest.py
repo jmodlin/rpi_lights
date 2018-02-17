@@ -47,13 +47,14 @@ def panelOff(strip, idx):
 def stacker(strip, c=Color(255,255,255), wait_ms=250):
 
     endBlock = 5
-        
-    for i in range(0, endBlock-1):
-        
-        panelOn(strip, i, c)
-        strip.show()
-        time.sleep(wait_ms/1000.0)
-        
+    
+    while endBlock > 0:
+        for i in range(0, endBlock):
+            
+            panelOn(strip, i, c)
+            strip.show()
+            time.sleep(wait_ms/1000.0)
+        endBlock -= 1
 
 def clear(strip):
         for j in range(LED_COUNT):
