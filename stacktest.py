@@ -81,12 +81,12 @@ if __name__ == '__main__':
     print ('Press Ctrl-C to quit.')
 
     while True:
-        Print (' > 250 ms ')
+        print (' > 250 ms ')
         c = Color(255, 255, 0)
         stacker(strip, c)
         clear(strip)
 
-        Print (' > 50 ms ')
+        print (' > 50 ms ')
         c = Color(255, 0, 255)
         stacker(strip, c, 50)
         clear()
