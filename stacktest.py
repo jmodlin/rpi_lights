@@ -76,9 +76,8 @@ if __name__ == '__main__':
     strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
     # Intialize the library (must be called once before other functions).
     strip.begin()
-    
-	print ('Press Ctrl-C to quit.')
+    print ('Press Ctrl-C to quit.')
 
-	while True:
+    while True:
         stacker(strip)
         clear(strip)
