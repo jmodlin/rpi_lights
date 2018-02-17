@@ -51,6 +51,9 @@ def stacker(strip, c=Color(255,255,255), wait_ms=250):
     while endBlock > 0:
         for i in range(0, endBlock):
             
+            if i > 0:
+                panelOff(strip, i)
+                
             panelOn(strip, i, c)
             strip.show()
             time.sleep(wait_ms/1000.0)
