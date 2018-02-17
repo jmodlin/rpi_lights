@@ -46,12 +46,11 @@ def panelOff(strip, idx):
 
 def stacker(strip, c=Color(255,255,255), wait_time=250):
 
-    i = 0
     endBlock = 5
 
     while endBlock > 0:
         
-        for i in (0, endBlock):
+        for i in (0, endBlock-1):
             if i >= 0:
                 panelOff(strip, i-1)
 
@@ -87,6 +86,6 @@ if __name__ == '__main__':
         clear(strip)
 
         print (' > 500 ms ')
-        c = Color(255, 0, 255)
+        c = Color(0, 255, 255)
         stacker(strip, c, 500)
         clear(strip)
