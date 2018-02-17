@@ -90,3 +90,12 @@ if __name__ == '__main__':
         
         time.sleep(2.0)
         clear(strip)
+
+        print (' > 150 ms ')
+        c = Color(255, 69, 0)
+        stacker(strip, c, 150)
+        
+        time.sleep(2.0)
+        clear(strip)
+
+        
