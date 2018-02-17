@@ -44,15 +44,15 @@ def panelOff(strip, idx):
     for j in range(idx * 32, idx * 32 + 32):
         strip.setPixelColor(j, c)
 
-def stacker(strip, c=Color(255,255,255), wait_time=250):
+def stacker(strip, c=Color(255,255,255), wait_ms=250):
 
     endBlock = 5
         
-    for i in (0, endBlock-1):
+    for i in range(0, endBlock-1):
         
         panelOn(strip, i, c)
         strip.show()
-        time.sleep(wait_time/1000.0)
+        time.sleep(wait_ms/1000.0)
         
 
 def clear(strip):
