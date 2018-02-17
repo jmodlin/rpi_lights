@@ -82,7 +82,11 @@ if __name__ == '__main__':
         stacker(strip, c)
         clear(strip)
 
-        print (' > 500 ms ')
+        time.sleep(2000.0)
+
+        print (' > 100 ms ')
         c = Color(0, 255, 255)
-        stacker(strip, c, 500)
+        stacker(strip, c, 100)
         clear(strip)
+
+        time.sleep(2000.0)
