@@ -80,13 +80,13 @@ if __name__ == '__main__':
         print (' > 250 ms ')
         c = Color(255, 255, 0)
         stacker(strip, c)
+        
+        time.sleep(2.0)
         clear(strip)
-
-        time.sleep(2000.0)
 
         print (' > 100 ms ')
         c = Color(0, 255, 255)
         stacker(strip, c, 100)
+        
+        time.sleep(2.0)
         clear(strip)
-
-        time.sleep(2000.0)
