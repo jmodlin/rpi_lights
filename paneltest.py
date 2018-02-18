@@ -130,9 +130,8 @@ if __name__ == '__main__':
 	while True:
                 print ('on')
                 p.setColor(strip, Color(255,255,0))
-                strip.show()
                 time.sleep(1.0)
+
                 print('off')
                 p.setColor(strip, Color(0, 0, 0))
-                strip.show()
                 time.sleep(1.0)
