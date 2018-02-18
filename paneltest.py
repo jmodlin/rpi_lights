@@ -168,7 +168,7 @@ if __name__ == '__main__':
                 strip.show()
                 time.sleep(t)
 
-                c = Color(255, 255, 0)
+                c = Color(0, 0, 255)
                 p0.setLeftColor(c)
                 strip.show()
                 time.sleep(t)
@@ -185,7 +185,7 @@ if __name__ == '__main__':
                 strip.show()
                 time.sleep(t)
 
-                c = Color(0, 255, 255)
+                c = Color(255, 0, 0)
                 p0.setLeftColor(c)
                 strip.show()
                 time.sleep(t)
