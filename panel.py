@@ -11,9 +11,6 @@ class Panel:
 
         for i in range(0, self.pixels):
             strip.setPixelColor(self.idx*self.pixels+i, c)
-            print (self.idx*self.pixels+i),
-            print ('-'),
-        strip.show()
 
 
 
