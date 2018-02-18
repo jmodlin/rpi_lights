@@ -135,3 +135,9 @@ if __name__ == '__main__':
                 print('off')
                 p.setColor(strip, Color(0, 0, 0))
                 time.sleep(1.0)
+
+                pos = 3
+                for i in range(3*32, 3*32+32):
+                        strip.setPixelColor(i, Color(255,0,0))
+                strip.show()
+                time.sleep(1.0)
