@@ -5,7 +5,7 @@
 # various animations on a strip of NeoPixels.
 import time
 import random
-from panel import Panel
+from .panel import Panel
 
 from neopixel import *
 
