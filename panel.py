@@ -28,12 +28,12 @@ class Panel:
 
     def setRightColor(self, c):
         beginRange = self.idx*self.pixels + 2*self.pixels/4
-        endRange = self.idx*self.pixels + 2*self.pixels/4 + self.pixel/4
+        endRange = self.idx*self.pixels + 2*self.pixels/4 + self.pixels/4
         self.setRangeColor(beginRange, endRange, c)
     
     def setBottomColor(self, c):
         beginRange = self.idx*self.pixels + 3*self.pixels/4
-        endRange = self.idx*self.pixels + 3*self.pixels/4 + self.pixel/4
+        endRange = self.idx*self.pixels + 3*self.pixels/4 + self.pixels/4
         self.setRangeColor(beginRange, endRange, c)
 
 
