@@ -123,7 +123,7 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 
-        p = Panel(2, 32)
+        p = Panel(strip, 2, 32)
 
 
 	print ('Press Ctrl-C to quit.')
