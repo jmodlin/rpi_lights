@@ -2,9 +2,8 @@
 
 class Panel:
 
-    def __init__(self, strip, idx, pixels):
+    def __init__(self, idx, pixels):
         print ('Panel initialized')
-        self.strip = strip
         self.idx = idx
         self.pixels = pixels
 

@@ -123,7 +123,7 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 
-        p = Panel(strip, 3, 32)
+        p = Panel(2, 32)
 
 
 	print ('Press Ctrl-C to quit.')
@@ -131,8 +131,8 @@ if __name__ == '__main__':
                 p.setColor(strip, Color(255,255,0))
                 strip.show()
 
-                time.sleep(0.5)
+                time.sleep(1)
 
                 p.setColor(strip, Color(0, 0, 0))
                 strip.show()
-                time.sleep(0.5)
+                time.sleep(1)
