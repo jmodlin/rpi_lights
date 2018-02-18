@@ -140,13 +140,13 @@ if __name__ == '__main__':
                 for p in panels:
                         p.setTopColor(c)
                         strip.show()
-                        strip.sleep(t)
+                        time.sleep(t)
                 
                 c = Color(255, 0, 0)
                 for p in panels:
                         p.setBottomColor(c)
                         strip.show()
-                        strip.sleep(t)
+                        time.sleep(t)
                 
                 c = Color(0, 0, 255)
                 for p in panels:
@@ -158,7 +158,7 @@ if __name__ == '__main__':
                 for p in panels:
                         p.setRightColor(c)
                         strip.show()
-                        strip.sleep(t)
+                        time.sleep(t)
 
                 t = 0.1
                 time.sleep(1.5)
