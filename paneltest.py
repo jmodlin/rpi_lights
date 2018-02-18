@@ -131,8 +131,8 @@ if __name__ == '__main__':
                 p.setColor(strip, Color(255,255,0))
                 strip.show()
 
-                time.sleep(1)
+                time.sleep(1.0)
 
                 p.setColor(strip, Color(0, 0, 0))
                 strip.show()
-                time.sleep(1)
+                time.sleep(1.0)
