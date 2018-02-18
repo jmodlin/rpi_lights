@@ -9,8 +9,9 @@ class Panel:
         self.pixels = pixels
 
     def setColor(self, c):
-        for i in range(self.idx*i, self.idx*i+pixels):
-            self.strip.setPixelColor(i, c)
+
+        for i in range(0, self.pixels):
+            self.strip.setPixelColor(self.idx*self.pixels+i, c)
 
 
         
