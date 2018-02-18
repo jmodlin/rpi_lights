@@ -123,18 +123,44 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 
-        p = Panel(strip, 2, 32)
+        p0 = Panel(strip, 0, 32)
+        p1 = Panel(strip, 1, 32)
+        p2 = Panel(strip, 2, 32)
+        p3 = Panel(strip, 3, 32)
+        p4 = Panel(strip, 4, 32)
 
 
 	print ('Press Ctrl-C to quit.')
 	while True:
-                print ('on')
-                p.setColor(Color(255,255,0))
+                # Set top colors blue
+                c = Color(0,0, 255)
+                p0.setTopColor(c)
                 strip.show()
                 time.sleep(1.0)
-
-                print('off')
-                p.setColor(Color(0, 0, 0))
+                p1.setTopColor(c)
                 strip.show()
                 time.sleep(1.0)
+                p2.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p3.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p4.setTopColor(c)
+                
+                c = Color(0,0, 0)
+                p0.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p1.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p2.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p3.setTopColor(c)
+                strip.show()
+                time.sleep(1.0)
+                p4.setTopColor(c)
+                
 
