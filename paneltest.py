@@ -128,11 +128,11 @@ if __name__ == '__main__':
 
 	print ('Press Ctrl-C to quit.')
 	while True:
-                p.setColor(Color(255,255,0))
+                p.setColor(strip, Color(255,255,0))
                 strip.show()
 
                 time.sleep(0.5)
 
-                p.setColor(Color(0, 0, 0))
+                p.setColor(strip, Color(0, 0, 0))
                 strip.show()
                 time.sleep(0.5)
