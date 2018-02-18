@@ -133,7 +133,7 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 	while True:
                 # Set top colors blue
-                t = 0.5
+                t = 0.1
                 c = Color(0,0, 255)
                 p0.setTopColor(c)
                 strip.show()
