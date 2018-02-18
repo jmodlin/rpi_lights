@@ -1,6 +1,6 @@
 
 
-class Panel(object):
+class Panel:
 
     def __init__(self, strip, idx, pixels):
         print ('Panel initialized')
@@ -8,7 +8,7 @@ class Panel(object):
         self.idx = idx
         self.pixels = pixels
 
-    def setColor(c)
+    def setColor(self, c)
         for i in range(idx*i, idx*i+pixels):
             self.strip.setPixelColor(i, c)
 
