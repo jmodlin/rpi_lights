@@ -41,7 +41,7 @@ class Panel:
         self.setRangeColor(beginRange, endRange, c)
 
     def rotateColor(self, n):
-        rotated = []
+        rotated = [Color(0,0,0) for i in range(self.pixels)]
 
         for i in range(self.pixels):
             rotated[i] = self.leds[(i+n)%self.pixels]
