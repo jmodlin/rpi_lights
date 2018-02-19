@@ -40,7 +40,17 @@ class Panel:
         endRange = 3*self.pixels/4 + self.pixels/4
         self.setRangeColor(beginRange, endRange, c)
 
-    def rotateColor(self, n):
+    def rotateCW(self, n):
+        rotated = [Color(0,0,0) for i in range(self.pixels)]
+
+        for i in range(self.pixels):
+            rotated[i] = self.leds[(i-n)%self.pixels]
+        
+        for i in range(self.pixels):
+            self.strip.setPixelColor(self.idx*self.pixels+i, rotated[i])
+            self.leds[i] = rotated[i]
+
+    def rotateCCW(self, n):
         rotated = [Color(0,0,0) for i in range(self.pixels)]
 
         for i in range(self.pixels):
@@ -49,6 +59,9 @@ class Panel:
         for i in range(self.pixels):
             self.strip.setPixelColor(self.idx*self.pixels+i, rotated[i])
             self.leds[i] = rotated[i]
+
+            
+
 
 
 
