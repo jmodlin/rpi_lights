@@ -1,4 +1,5 @@
 
+from neopixel import *
 
 class Panel:
 
