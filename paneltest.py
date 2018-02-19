@@ -186,3 +186,22 @@ if __name__ == '__main__':
                 
                 time.sleep(1.5)
 
+                # Rainbow
+                panels[0].setLeftColor(Color(255, 0 , 0))
+                panels[0].setRightColor(Color(255, 127, 0))
+                panels[1].setLeftColor(Color(255, 255 , 0))
+                panels[1].setRightColor(Color(0, 255, 0))
+                panels[2].setLeftColor(Color(0, 0 , 255))
+                panels[2].setRightColor(Color(75, 0, 130))
+                panels[3].setLeftColor(Color(148, 0 , 211))
+                
+                # Clear
+                t = 0.1
+                time.sleep(1.5)
+                c = Color(0, 0, 0)
+                for p in panels:
+                        p.setColor(c)
+                        strip.show()
+                        time.sleep(t)
+                
+                time.sleep(1.5)
