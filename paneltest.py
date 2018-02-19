@@ -188,12 +188,27 @@ if __name__ == '__main__':
 
                 # Rainbow
                 panels[0].setLeftColor(Color(255, 0 , 0))
+                panels[0].setTopColor(Color(255, 0 , 0))
                 panels[0].setRightColor(Color(255, 127, 0))
+                panels[0].setBottomColor(Color(255, 127, 0))
+                strip.show()
+                time.sleep(0.1)
                 panels[1].setLeftColor(Color(255, 255 , 0))
+                panels[1].setTopColor(Color(255, 255 , 0))
                 panels[1].setRightColor(Color(0, 255, 0))
+                panels[1].setBottomColor(Color(0, 255 , 0))
+                strip.show()
+                time.sleep(0.1)
+                
                 panels[2].setLeftColor(Color(0, 0 , 255))
+                panels[2].setTopColor(Color(0, 0 , 255))
                 panels[2].setRightColor(Color(75, 0, 130))
+                panels[2].setBottomColor(Color(75, 0, 130))
+                strip.show()
+                time.sleep(0.1)
+                
                 panels[3].setLeftColor(Color(148, 0 , 211))
+                panels[3].setTopColor(Color(148, 0 , 211))
                 strip.show()
                 time.sleep(3.0)
 
