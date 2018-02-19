@@ -161,10 +161,10 @@ if __name__ == '__main__':
                         time.sleep(t)
 
                 # Rotate
-                t = 0.03
-                for i in range(16):
+                t = 0.1
+                for i in range(32):
                         for p in panels:
-                                p.rotateColor(2)
+                                p.rotateColor(1)
                         strip.show()
                         time.sleep(t)
                         
