@@ -160,6 +160,15 @@ if __name__ == '__main__':
                         strip.show()
                         time.sleep(t)
 
+                # Rotate
+                t = 0.01
+                for i in range(32):
+                        for p in panels:
+                                p.rotateColor(1)
+                        strip.show()
+                        time.sleep(t)
+                        
+                # Clear
                 t = 0.1
                 time.sleep(1.5)
                 c = Color(0, 0, 0)
