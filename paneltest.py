@@ -194,7 +194,9 @@ if __name__ == '__main__':
                 panels[2].setLeftColor(Color(0, 0 , 255))
                 panels[2].setRightColor(Color(75, 0, 130))
                 panels[3].setLeftColor(Color(148, 0 , 211))
-                
+                strip.show()
+                time.sleep(3.0)
+
                 # Clear
                 t = 0.1
                 time.sleep(1.5)
