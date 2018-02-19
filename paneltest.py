@@ -162,17 +162,18 @@ if __name__ == '__main__':
 
                 # Rotate
                 t = 0.01
-                for i in range(32):
-                        for p in panels:
-                                p.rotateCW(1)
-                        strip.show()
-                        time.sleep(t)
+                for i in range(5):
+                        for i in range(32):
+                                for p in panels:
+                                        p.rotateCW(1)
+                                strip.show()
+                                time.sleep(t)
 
-                for i in range(32):
-                        for p in panels:
-                                p.rotateCCW(1)
-                        strip.show()
-                        time.sleep(t)
+                        for i in range(32):
+                                for p in panels:
+                                        p.rotateCCW(1)
+                                strip.show()
+                                time.sleep(t)
                         
                 # Clear
                 t = 0.1
