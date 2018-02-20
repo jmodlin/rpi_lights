@@ -149,26 +149,32 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 	while True:
                 
+
                 #MODLIN\
                 buff = 'M'
-                for letter in buff:
-                        for i in range(20):
-                                for tick in range(5):
-                                        for p in range(5):
-                                                panels[p].setColor(pov.letters[letter][tick, p])
-                                        strip.show()
-                                        time.sleep(0.0265)
+                
+                for ms in range(0.01, 0.06, 0.01):
+                
+                        print (ms),
+                        print ('ms')
+                        for letter in buff:
+                                for i in range(20):
+                                        for tick in range(5):
+                                                for p in range(5):
+                                                        panels[p].setColor(pov.letters[letter][tick, p])
+                                                strip.show()
+                                                time.sleep(ms)
 
-                                for tick in range(4, -1, -1):
-                                        for p in range(5):
-                                                panels[p].setColor(pov.letters[letter][tick, p])
-                                        strip.show()
-                                        time.sleep(0.0265)
+                                        for tick in range(4, -1, -1):
+                                                for p in range(5):
+                                                        panels[p].setColor(pov.letters[letter][tick, p])
+                                                strip.show()
+                                                time.sleep(ms)
 
-                        for p in panels:
-                                p.setColor(Color(0, 0, 0))
-                        strip.show()
-                        time.sleep(2.0)
+                                for p in panels:
+                                        p.setColor(Color(0, 0, 0))
+                                strip.show()
+                                time.sleep(2.0)
  
 
 
