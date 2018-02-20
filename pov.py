@@ -46,7 +46,7 @@ class POV:
         #   #   #
         #   #   #
         #   #### 
-        self.D = [0 for i in range(5)][0 for i in range(5)]
+        self.D = [[0 for i in range(5)] for i in range(5)]
         self.D[0] = [c for i in range(5)]
         self.D[1][0] = c
         self.D[1][4] = c
@@ -62,7 +62,7 @@ class POV:
         #     #   
         #     #  
         #   ##### 
-        self.I = [0 for i in range(5)][0 for i in range(5)]
+        self.I = [[0 for i in range(5) for i in range(5)]
         self.I[0][0] = c
         self.I[0][4] = c
         self.I[1][0] = c
@@ -79,7 +79,7 @@ class POV:
         #   #   
         #   #   
         #   ##### 
-        self.L = [0 for i in range(5)][0 for i in range(5)]
+        self.L = [[0 for i in range(5) for i in range(5)]
         self.L[0] = [c for i in range(5)]
         self.L[1][4] = c
         self.L[2][4] = c
@@ -92,7 +92,7 @@ class POV:
         #   # # #
         #   #   #
         #   #   #
-        self.M = [0 for i in range(5)][0 for i in range(5)]
+        self.M = [[0 for i in range(5) for i in range(5)]
         self.M[0] = [c for i in range(5)]
         self.M[1][1] = c
         self.M[2][2] = c
@@ -105,7 +105,7 @@ class POV:
         #   # # #
         #   #  ##
         #   #   #
-        self.N = [0 for i in range(5)][0 for i in range(5)]
+        self.N = [[0 for i in range(5) for i in range(5)]
         self.N[0] = [c for i in range(5)]
         self.N[1][1] = c
         self.N[2][2] = c
@@ -118,7 +118,7 @@ class POV:
         #   #   #
         #   #   #
         #    ### 
-        self.O = [0 for i in range(5)][0 for i in range(5)]
+        self.O = [[0 for i in range(5) for i in range(5)]
         self.O[0] = [c for i in range(1, 3, 1)]
         self.O[1][0] = c
         self.O[1][4] = c
