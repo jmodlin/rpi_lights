@@ -47,8 +47,8 @@ class POV:
         #   #   #
         #   #   #
         #    ###
-        self.letter['D'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['D'] = {
+        self.letters['D'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['D'] = {
                                 (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
                                 (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
                                 (2, 0): c, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
@@ -61,8 +61,8 @@ class POV:
         #   #####   
         #   #   #  
         #   #   # 
-        self.letter['I'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['I'] = {
+        self.letters['I'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['I'] = {
                                 (0, 0): c, (0, 1): 0, (0, 2): 0, (0, 3): 0, (0, 4): c, 
                                 (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
                                 (2, 0): c, (2, 1): c, (2, 2): c, (2, 3): c, (2, 4): c, 
@@ -75,8 +75,8 @@ class POV:
         #       #   
         #       #   
         #       # 
-        self.letter['L'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['L'] = {
+        self.letters['L'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['L'] = {
                                 (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
                                 (1, 0): 0, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
                                 (2, 0): 0, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
@@ -89,8 +89,8 @@ class POV:
         #     #
         #    #
         #   #####
-        self.letter['M'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['M'] = {
+        self.letters['M'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['M'] = {
                                 (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
                                 (1, 0): 0, (1, 1): c, (1, 2): 0, (1, 3): 0, (1, 4): 0, 
                                 (2, 0): 0, (2, 1): 0, (2, 2): c, (2, 3): 0, (2, 4): 0, 
@@ -103,8 +103,8 @@ class POV:
         #     #
         #      #
         #   #####
-        self.letter['N'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['N'] = {
+        self.letters['N'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['N'] = {
                                 (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
                                 (1, 0): 0, (1, 1): c, (1, 2): 0, (1, 3): 0, (1, 4): 0, 
                                 (2, 0): 0, (2, 1): 0, (2, 2): c, (2, 3): 0, (2, 4): 0, 
@@ -117,8 +117,8 @@ class POV:
         #   #   #
         #   #   #
         #    ###
-        self.letter['O'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.letter['O'] = {
+        self.letters['O'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letters['O'] = {
                                 (0, 0): 0, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): 0, 
                                 (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
                                 (2, 0): c, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
