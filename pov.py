@@ -34,6 +34,10 @@ class POV:
     def __init__(self, strip, c):
         self.strip = strip
         
+        self.letters = []
+        for letter in range(65, 91):
+                self.letters.append(chr(letter))
+
         # 1st dimension = tick ... 2nd dimension = color
         # Start at TOP LEFT of letter
         ###
@@ -43,15 +47,13 @@ class POV:
         #   #   #
         #   #   #
         #   #### 
-        #self.D = [[0 for i in range(5)] for i in range(5)]
-        #self.D[0] = [c for i in range(5)]
-        #self.D[1][0] = c
-        #self.D[1][4] = c
-        #self.D[2][0] = c
-        #self.D[2][4] = c
-        #self.D[3][0] = c
-        #self.D[3][4] = c
-        #self.D[4] = [c for i in range(1, 3, 1)]
+        self.letter['D'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['D'] = {
+                                (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
+                                (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
+                                (2, 0): c, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
+                                (3, 0): c, (3, 1): 0, (3, 2): 0, (3, 3): 0, (3, 4): c, 
+                                (4, 0): 0, (4, 1): c, (4, 2): c, (4, 3): c, (4, 4): 0 }
 
         # I
         #   ##### 
@@ -59,16 +61,13 @@ class POV:
         #     #   
         #     #  
         #   ##### 
-        #self.I = [[0 for i in range(5) for i in range(5)]
-        #self.I[0][0] = c
-        #self.I[0][4] = c
-        #self.I[1][0] = c
-        #self.I[1][4] = c
-        #self.I[2] = [c for i in range(5)]
-        #self.I[3][0] = c
-        #self.I[3][4] = c
-        #self.I[4][0] = c
-        #self.I[4][4] = c
+        self.letter['I'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['I'] = {
+                                (0, 0): c, (0, 1): 0, (0, 2): 0, (0, 3): 0, (0, 4): c, 
+                                (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
+                                (2, 0): c, (2, 1): c, (2, 2): c, (2, 3): c, (2, 4): c, 
+                                (3, 0): c, (3, 1): 0, (3, 2): 0, (3, 3): 0, (3, 4): c, 
+                                (4, 0): c, (4, 1): 0, (4, 2): 0, (4, 3): 0, (4, 4): c }
 
         # L
         #   # 
@@ -76,12 +75,13 @@ class POV:
         #   #   
         #   #   
         #   ##### 
-        #self.L = [[0 for i in range(5) for i in range(5)]
-        #self.L[0] = [c for i in range(5)]
-        #self.L[1][4] = c
-        #self.L[2][4] = c
-        #self.L[3][4] = c
-        #self.L[4][4] = c
+        self.letter['L'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['L'] = {
+                                (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
+                                (1, 0): 0, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
+                                (2, 0): 0, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
+                                (3, 0): 0, (3, 1): 0, (3, 2): 0, (3, 3): 0, (3, 4): c, 
+                                (4, 0): 0, (4, 1): 0, (4, 2): 0, (4, 3): 0, (4, 4): c }
 
         # M
         #   #   #
@@ -89,13 +89,13 @@ class POV:
         #   # # #
         #   #   #
         #   #   #
-        self.M = { (tick, color): 0 for tick in range(5) for color in range(5) }
-        self.M = {
-                        (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
-                        (1, 0): 0, (1, 1): c, (1, 2): 0, (1, 3): 0, (1, 4): 0, 
-                        (2, 0): 0, (2, 1): 0, (2, 2): c, (2, 3): 0, (2, 4): 0, 
-                        (3, 0): 0, (3, 1): c, (3, 2): 0, (3, 3): 0, (3, 4): 0, 
-                        (4, 0): c, (4, 1): c, (4, 2): c, (4, 3): c, (4, 4): c }
+        self.letter['M'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['M'] = {
+                                (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
+                                (1, 0): 0, (1, 1): c, (1, 2): 0, (1, 3): 0, (1, 4): 0, 
+                                (2, 0): 0, (2, 1): 0, (2, 2): c, (2, 3): 0, (2, 4): 0, 
+                                (3, 0): 0, (3, 1): c, (3, 2): 0, (3, 3): 0, (3, 4): 0, 
+                                (4, 0): c, (4, 1): c, (4, 2): c, (4, 3): c, (4, 4): c }
 
         # N
         #   #   #
@@ -103,12 +103,13 @@ class POV:
         #   # # #
         #   #  ##
         #   #   #
-        #self.N = [[0 for i in range(5) for i in range(5)]
-        #self.N[0] = [c for i in range(5)]
-        #self.N[1][1] = c
-        #self.N[2][2] = c
-        #self.N[3][3] = c
-        #self.N[4] = [c for i in range(5)]
+        self.letter['N'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['N'] = {
+                                (0, 0): c, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): c, 
+                                (1, 0): 0, (1, 1): c, (1, 2): 0, (1, 3): 0, (1, 4): 0, 
+                                (2, 0): 0, (2, 1): 0, (2, 2): c, (2, 3): 0, (2, 4): 0, 
+                                (3, 0): 0, (3, 1): 0, (3, 2): 0, (3, 3): c, (3, 4): 0, 
+                                (4, 0): c, (4, 1): c, (4, 2): c, (4, 3): c, (4, 4): c }
         
         # O
         #    ### 
@@ -116,16 +117,13 @@ class POV:
         #   #   #
         #   #   #
         #    ### 
-        #self.O = [[0 for i in range(5) for i in range(5)]
-        #self.O[0] = [c for i in range(1, 3, 1)]
-        #self.O[1][0] = c
-        #self.O[1][4] = c
-        #self.O[2][0] = c
-        #self.O[2][4] = c
-        #self.O[3][0] = c
-        #self.O[3][4] = c
-        #self.O[4] = [c for i in range(1, 3, 1)]
-
+        self.letter['O'] = { (tick, color): 0 for tick in range(5) for color in range(5) }
+        self.letter['O'] = {
+                                (0, 0): 0, (0, 1): c, (0, 2): c, (0, 3): c, (0, 4): 0, 
+                                (1, 0): c, (1, 1): 0, (1, 2): 0, (1, 3): 0, (1, 4): c, 
+                                (2, 0): c, (2, 1): 0, (2, 2): 0, (2, 3): 0, (2, 4): c, 
+                                (3, 0): c, (3, 1): 0, (3, 2): 0, (3, 3): 0, (3, 4): c, 
+                                (4, 0): 0, (4, 1): c, (4, 2): c, (4, 3): c, (4, 4): 0 }
 
 
 # Main program logic follows:
@@ -150,23 +148,26 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 	while True:
                 
-                for i in range(20):
-                        for tick in range(5):
-                                for p in range(5):
-                                        panels[p].setColor(pov.M[tick, p])
-                                strip.show()
-                                time.sleep(1.0)
+                #MODLIN\
+                buff = 'MODLIN'
+                for letter in buff:
+                        for i in range(1):
+                                for tick in range(5):
+                                        for p in range(5):
+                                                panels[p].setColor(pov.letters[letter][tick, p])
+                                        strip.show()
+                                        time.sleep(1.0)
 
-                        for tick in range(4, -1, -1):
-                                for p in range(5):
-                                        panels[p].setColor(pov.M[tick, p])
-                                strip.show()
-                                time.sleep(1.0)
+                                for tick in range(4, -1, -1):
+                                        for p in range(5):
+                                                panels[p].setColor(pov.letters[letter][tick, p])
+                                        strip.show()
+                                        time.sleep(1.0)
 
-                for p in panels:
-                        p.setColor(Color(0, 0, 0))
-                strip.show()
-                time.sleep(5.0)
+                        for p in panels:
+                                p.setColor(Color(0, 0, 0))
+                        strip.show()
+                        time.sleep(2.0)
  
 
 
