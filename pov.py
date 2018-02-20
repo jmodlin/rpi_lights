@@ -153,8 +153,9 @@ if __name__ == '__main__':
                 #MODLIN\
                 buff = 'M'
                 
-                for ms in range(0.01, 0.06, 0.01):
+                for s in range(1,10):
                 
+                        ms = s/100.0
                         print (ms),
                         print ('ms')
                         for letter in buff:
