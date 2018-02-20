@@ -157,13 +157,13 @@ if __name__ == '__main__':
                                         for p in range(5):
                                                 panels[p].setColor(pov.letters[letter][tick, p])
                                         strip.show()
-                                        time.sleep(0.013)
+                                        time.sleep(1.0265)
 
                                 for tick in range(4, -1, -1):
                                         for p in range(5):
                                                 panels[p].setColor(pov.letters[letter][tick, p])
                                         strip.show()
-                                        time.sleep(0.013)
+                                        time.sleep(1.0265)
 
                         for p in panels:
                                 p.setColor(Color(0, 0, 0))
