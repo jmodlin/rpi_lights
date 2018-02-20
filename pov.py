@@ -152,18 +152,18 @@ if __name__ == '__main__':
                 #MODLIN\
                 buff = 'M'
                 for letter in buff:
-                        for i in range(1):
+                        for i in range(20):
                                 for tick in range(5):
                                         for p in range(5):
                                                 panels[p].setColor(pov.letters[letter][tick, p])
                                         strip.show()
-                                        time.sleep(0.13)
+                                        time.sleep(0.06)
 
                                 for tick in range(4, -1, -1):
                                         for p in range(5):
                                                 panels[p].setColor(pov.letters[letter][tick, p])
                                         strip.show()
-                                        time.sleep(0.13)
+                                        time.sleep(0.06)
 
                         for p in panels:
                                 p.setColor(Color(0, 0, 0))
