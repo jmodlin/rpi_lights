@@ -37,7 +37,7 @@ class POV:
         self.letters = {'A': {}, 'B': {}, 'C': {}, 'D': {}, 'E': {}, 'F': {}, 'G': {}, 
                         'H': {}, 'I': {}, 'J': {}, 'K': {}, 'L': {}, 'M': {}, 'N': {}, 
                         'O': {}, 'P': {}, 'Q': {}, 'R': {}, 'S': {}, 'T': {}, 'U': {}, 
-                        'V': {}, 'W': {}, 'X': {}, 'Y': {}, 'Z'}
+                        'V': {}, 'W': {}, 'X': {}, 'Y': {}, 'Z': {}}
 
         # 1st dimension = tick ... 2nd dimension = color
         # Start at TOP LEFT of letter
