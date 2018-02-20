@@ -32,8 +32,6 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 class POV:
 
     def __init__(self, strip, c):
-        self.idx = idx
-        self.pixels = pixels
         self.strip = strip
         self.leds = [Color(0, 0, 0) for i in range(pixels)]
 
