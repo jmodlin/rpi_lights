@@ -34,9 +34,10 @@ class POV:
     def __init__(self, strip, c):
         self.strip = strip
         
-        self.letters = []
-        for letter in range(65, 91):
-                self.letters.append(chr(letter))
+        self.letters = {'A': {}, 'B': {}, 'C': {}, 'D': {}, 'E': {}, 'F': {}, 'G': {}, 
+                        'H': {}, 'I': {}, 'J': {}, 'K': {}, 'L': {}, 'M': {}, 'N': {}, 
+                        'O': {}, 'P': {}, 'Q': {}, 'R': {}, 'S': {}, 'T': {}, 'U': {}, 
+                        'V': {}, 'W': {}, 'X': {}, 'Y': {}, 'Z'}
 
         # 1st dimension = tick ... 2nd dimension = color
         # Start at TOP LEFT of letter
