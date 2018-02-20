@@ -33,8 +33,7 @@ class POV:
 
     def __init__(self, strip, c):
         self.strip = strip
-        self.leds = [Color(0, 0, 0) for i in range(pixels)]
-
+        
         # 1st dimension = tick ... 2nd dimension = color
         # Start at TOP LEFT of letter
         ###
