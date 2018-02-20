@@ -166,12 +166,6 @@ if __name__ == '__main__':
                                                 strip.show()
                                                 time.sleep(ms)
 
-                                        for tick in range(4, -1, -1):
-                                                for p in range(5):
-                                                        panels[p].setColor(pov.letters[letter][tick, p])
-                                                strip.show()
-                                                time.sleep(ms)
-
                                 for p in panels:
                                         p.setColor(Color(0, 0, 0))
                                 strip.show()
