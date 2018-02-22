@@ -29,7 +29,7 @@ class Show:
 # Main program logic follows:
 if __name__ == '__main__':
 
-	# Initialize display 
+    # Initialize display 
     display = Display(5, 32)
 
     # Initialize animations for show
