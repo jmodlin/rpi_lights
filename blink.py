@@ -19,8 +19,8 @@ class Blink(Animation):
         for i in range(15):
             for p in self.display.panels:
                 p.setPanelColor(Color(255,0,0))
-                self.display.update()
-                time.sleep(2.0)
+            self.display.update()
+            time.sleep(2.0)
             self.display.clear()
             time.sleep(2.0)
 
