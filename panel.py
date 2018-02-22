@@ -62,14 +62,3 @@ class Panel:
         for i in range(self.pixels):
             self.strip.setPixelColor(self.idx*self.pixels+i, rotated[i])
             self.leds[i] = rotated[i]
-
-            
-
-
-
-
-
-
-
-        
-    
