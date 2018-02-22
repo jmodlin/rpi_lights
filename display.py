@@ -41,6 +41,6 @@ class Display:
         self.strip.show()
 
     def clear(self):
-        for i in range(self.numPanels):
-            panel.setPanelColor(Color(0, 0, 0))
+        for p in self.panels:
+            p.setPanelColor(Color(0, 0, 0))
 
