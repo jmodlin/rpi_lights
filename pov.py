@@ -133,9 +133,9 @@ if __name__ == '__main__':
         opt_parse()
 
 	# Create NeoPixel object with appropriate configuration.
-	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+        strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	# Intialize the library (must be called once before other functions).
-	strip.begin()
+        strip.begin()
 
         panels = []
         panels.append(Panel(strip, 0, 32))
@@ -146,15 +146,14 @@ if __name__ == '__main__':
 
         pov = POV(strip, Color(255, 0, 0))
         
-	print ('Press Ctrl-C to quit.')
-	while True:
-                
+        print ('Press Ctrl-C to quit.')
+        while True:
 
                 #MODLIN\
-                buff = 'M'
-                
+                buff = 'MODLIN'
+
                 for s in range(1,10):
-                
+
                         ms = s/100.0
                         print (ms),
                         print ('ms')
@@ -162,15 +161,15 @@ if __name__ == '__main__':
                                 for i in range(20):
                                         for tick in range(5):
                                                 for p in range(5):
-                                                        panels[p].setColor(pov.letters[letter][tick, p])
+                                                        panels[p].setPanelColor(pov.letters[letter][tick, p])
                                                 strip.show()
                                                 time.sleep(ms)
 
                                 for p in panels:
-                                        p.setColor(Color(0, 0, 0))
+                                        p.setPanelColor(Color(0, 0, 0))
                                 strip.show()
                                 time.sleep(2.0)
- 
+
 
 
 

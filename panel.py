@@ -10,7 +10,10 @@ class Panel:
         self.strip = strip
         self.leds = [Color(0, 0, 0) for i in range(pixels)]
 
-    def setColor(self, c):
+    def setPixelColor(self, idx, c):
+        self.strip.setPixelColor(self.idx*self.pixels+idx, c) 
+
+    def setPanelColor(self, c):
         for i in range(0, self.pixels):
             self.strip.setPixelColor(self.idx*self.pixels+i, c)
             self.leds[i] = c
