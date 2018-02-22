@@ -17,7 +17,7 @@ class Blink(Animation):
         self.ms = ms
 
     def begin(self):
-        self.display.clear()
+        Animation.begin(self)
         for i in range(10):
             for p in self.display.panels:
                 p.setPanelColor(self.color)
