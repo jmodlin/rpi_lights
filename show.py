@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     # Initialize animations for show
     redblinky = Blink(display, Color(255,0,0), 10, 250)
-    greenblinky = Blink(display, Color(0,255,0), 10. 250)
+    greenblinky = Blink(display, Color(0,255,0), 10, 250)
     kitt = Kitt(display, Color(255,0,0), 20, 100)
     animations = [redblinky, greenblinky, kitt]
 
