@@ -12,7 +12,7 @@ from display import *
 class Blink(Animation):
 
     def __init__(self, display, ms):
-        Animiation.__init__(self, display)
+        Animation.__init__(self, display)
         self.ms = ms
 
     def begin(self):
