@@ -32,7 +32,7 @@ class Display:
         # Initialize panel objects
         self.panels = []
         for i in range(pCount):
-            panels.append(Panel(strip, i, ppp))
+            self.panels.append(Panel(self.strip, i, ppp))
 
         # How many panels are there?
         self.numPanels = len(self.panels)
@@ -41,6 +41,6 @@ class Display:
         self.strip.show()
 
     def clear(self):
-        for i in range(self.numPanels):
-            panel.setPanelColor(Color(0, 0, 0))
+        for p in self.panels:
+            p.setPanelColor(Color(0, 0, 0))
 
