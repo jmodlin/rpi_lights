@@ -49,9 +49,9 @@ class Kitt(Animation):
                 self.display.panels[p].setPanelColor(self.color)
                 self.display.update()
 
-                # 200 / 1000 * 1 - (0/5) =200  
+                # 200 / 1000 * (1 - (0/5)) =200  
                 delay = (self.ms/1000.0) * (1.0 - (p/self.display.numPanels))
-                print(delay)
+                print('p->' + p + ' .. delay->' + delay)
                 time.sleep(delay)
             time.sleep(self.ms/4/1000.0)
             # Going down the panels
@@ -61,7 +61,7 @@ class Kitt(Animation):
                 self.display.panels[p].setPanelColor(self.color)
                 self.display.update()
                 delay = (self.ms/1000.0) * (1.0 - (self.display.numPanels-p+1/self.display.numPanels))
-                print(delay)
+                print('p->' + p + ' .. delay->' + delay)
                 time.sleep(delay)
             time.sleep(self.ms/4/1000.0)
 
