@@ -21,7 +21,7 @@ class Show:
         self.animations = animations
     
     def play(self):
-        print('starting show ...')
+        print('Starting show ...')
         for a in self.animations:
             a.begin()
 
@@ -33,8 +33,9 @@ if __name__ == '__main__':
     display = Display(5, 32)
 
     # Initialize animations for show
-    blinky = Blink(display, 250)
-    animations = [blinky]
+    redblinky = Blink(display, Color(255,0,0) 250)
+    greenblinky = Blink(display, Color(0,255,0) 250)
+    animations = [redblinky, greenblinky]
 
     # Initialize show
     show = Show(display, animations)

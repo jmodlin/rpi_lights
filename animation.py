@@ -14,6 +14,7 @@ class Animation:
         self.display = display
     
     def begin(self):
+        print ('Starting ' + self.__class__.__name__ + ' animation')
         display.clear()
         
     def end(self):

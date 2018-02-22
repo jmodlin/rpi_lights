@@ -11,15 +11,16 @@ from display import *
 
 class Blink(Animation):
 
-    def __init__(self, display, ms):
+    def __init__(self, display, c, ms):
         Animation.__init__(self, display)
+        self.color = c
         self.ms = ms
 
     def begin(self):
         self.display.clear()
-        for i in range(15):
+        for i in range(10):
             for p in self.display.panels:
-                p.setPanelColor(Color(255,0,0))
+                p.setPanelColor(self.color)
             self.display.update()
             time.sleep(self.ms/1000.0)
             self.display.clear()
