@@ -15,10 +15,10 @@ class Animation:
     
     def begin(self):
         print ('Starting ' + self.__class__.__name__ + ' animation')
-        display.clear()
+        self.display.clear()
         
     def end(self):
-        display.clear()
+        self.display.clear()
         
 
 
