@@ -67,6 +67,5 @@ if __name__ == '__main__':
     # Create display with 5 panels, 32 pixels per panel
     display = Display(strip, 5, 32)
         
-	print ('Press Ctrl-C to quit.')
-	while True:
-                
+    print ('Press Ctrl-C to quit.')
+	            
