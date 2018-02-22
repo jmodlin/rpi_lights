@@ -12,6 +12,7 @@ from neopixel import *
 from panel import *
 from animation import *
 from blink import *
+from kitt import *
 from display import *
 
 class Show:
