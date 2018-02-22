@@ -10,7 +10,7 @@ from display import *
 
 class Animation:
 
-    def __init__(self, display):        
+    def __init__(self, display):
         self.display = display
     
     def begin(self):

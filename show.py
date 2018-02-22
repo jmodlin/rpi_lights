@@ -33,7 +33,7 @@ if __name__ == '__main__':
     display = Display(5, 32)
 
     # Initialize animations for show
-    blinky = Blink(display)
+    blinky = Blink(display, 250)
     animations = [blinky]
 
     # Initialize show
