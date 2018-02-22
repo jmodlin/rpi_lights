@@ -4,7 +4,6 @@ from neopixel import *
 class Panel:
 
     def __init__(self, strip, idx, pixels):
-        print ('Panel initialized')
         self.idx = idx
         self.pixels = pixels
         self.strip = strip
