@@ -11,8 +11,7 @@ from neopixel import *
 # Custom objects
 from panel import *
 from animation import *
-from blink import *
-from kitt import *
+from animations import *
 from display import *
 
 class Show:
