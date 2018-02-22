@@ -43,4 +43,5 @@ class Display:
     def clear(self):
         for p in self.panels:
             p.setPanelColor(Color(0, 0, 0))
+        self.strip.show()
 
