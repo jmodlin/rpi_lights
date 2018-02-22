@@ -28,6 +28,7 @@ class Kitt(Animation):
                 self.display.panels[p].setPanelColor(self.color)
                 self.display.update()
                 time.sleep(self.ms/1000.0)
+            # Going down the panels
             for p in range(self.display.numPanels-1, -1, -1):
                 if p < (self.display.numPanels-1):
                     self.display.panels[p+1].setPanelColor(Color(0,0,0))
