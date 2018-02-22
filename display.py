@@ -43,4 +43,28 @@ class Display:
     def clear(self):
         for i in range(self.numPanels):
             panel.setPanelColor(Color(0, 0, 0))
+<<<<<<< HEAD
         self.strip.show()
+=======
+        self.strip.show()
+        
+
+        
+
+
+# Main program logic follows:
+if __name__ == '__main__':
+    # Process arguments
+    opt_parse()
+
+	# Create NeoPixel object with appropriate configuration.
+    strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+	# Intialize the library (must be called once before other functions).
+    strip.begin()
+
+    # Create display with 5 panels, 32 pixels per panel
+    display = Display(strip, 5, 32)
+        
+    print ('Press Ctrl-C to quit.')
+	            
+>>>>>>> 0d614c13b0dc5ed8f767409e5bdc3e301b3d2108
