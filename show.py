@@ -33,8 +33,8 @@ if __name__ == '__main__':
     display = Display(5, 32)
 
     # Initialize animations for show
-    redblinky = Blink(display, Color(255,0,0) 250)
-    greenblinky = Blink(display, Color(0,255,0) 250)
+    redblinky = Blink(display, Color(255,0,0), 250)
+    greenblinky = Blink(display, Color(0,255,0), 250)
     animations = [redblinky, greenblinky]
 
     # Initialize show
