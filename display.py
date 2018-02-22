@@ -32,7 +32,7 @@ class Display:
         # Initialize panel objects
         self.panels = []
         for i in range(pCount):
-            self.panels.append(Panel(strip, i, ppp))
+            self.panels.append(Panel(self.strip, i, ppp))
 
         # How many panels are there?
         self.numPanels = len(self.panels)
