@@ -43,10 +43,10 @@ class Rocker(Animation):
         Animation.begin(self)
 
         for p in self.display.panels:
-                p.setLeftColor(self.color1)
-                p.setTopColor(self.color1)
-                p.setRightColor(self.color2)
-                p.setBottomColor(self.color2)
+            p.setLeftColor(self.color1)
+            p.setTopColor(self.color1)
+            p.setRightColor(self.color2)
+            p.setBottomColor(self.color2)
             self.display.update()
 
         for i in range(self.iterations):
