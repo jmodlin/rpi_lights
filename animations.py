@@ -87,7 +87,7 @@ class Shimmer(Animation):
                 p.setFullLeftColor(self.colors[lColor])
                 p.setFullRightColor(self.colors[rColor])    
 
-            pos += 1
+                pos += 1
             self.display.update()
             time.sleep(self.ms/1000.0)
             
