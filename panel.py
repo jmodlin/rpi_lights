@@ -9,12 +9,12 @@ class Panel:
         self.strip = strip
         self.leds = [Color(0, 0, 0) for i in range(pixels)]
         self.sideLen = self.pixels/4
-        self.leftRange = [0, self.sideLen]
-        self.topRange = [(self.sideLen) + 1, self.sideLen * 2]
-        self.rightRange = [(self.sideLen * 2) + 1, self.sideLen * 3]
-        self.bottomRange = [(self.sideLen * 3) + 1, self.pixels]
-        self.leftFullRange = [0, self.sideLen * 1.5, self.pixels - self.sideLen/2, self.pixels]
-        self.rightFullRange = [(self.sideLen * 1.5) + 1, self.pixels - self.sideLen/2 - 1]
+        self.leftRange = [0, self.sideLen-1]
+        self.topRange = [self.sideLen, int(self.sideLen * 2 - 1)]
+        self.rightRange = [int(self.sideLen * 2), int(self.sideLen * 3 - 1)]
+        self.bottomRange = [int(self.sideLen * 3), int(self.pixels-1)]
+        self.leftFullRange = [0, int(self.sideLen * 1.5 - 1), int(self.pixels - self.sideLen/2), self.pixels-1]
+        self.rightFullRange = [int((self.sideLen * 1.5)), int(self.pixels - self.sideLen/2 - 1)]
         print ('lfr -> ' + `self.leftFullRange` + ' .. rfr -> ' + `self.rightFullRange`)
 
     def setPixelColor(self, idx, c):
