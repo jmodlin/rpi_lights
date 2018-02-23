@@ -79,9 +79,9 @@ class Shimmer(Animation):
         for i in range(self.iterations):
     
             print '.. start panels ..'
+            c = pos
             for p in self.display.panels:
                 
-                c = pos
                 print 'pos -> ' + `pos` + ' .. i -> ' + `i`
                 lColor = (i+c)%len(self.colors) 
                 print 'lcolor -> ' + `lColor`
