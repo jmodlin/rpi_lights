@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     rocker = Rocker(display, Color(0,255,10), Color(255,215,0), 20, 20)
     #animations = [redblinky, greenblinky, kitt]
-    animations = [rocker]
+    animations = [redblinky, greenblinky, kitt, shimmer, rocker]
 
     # Initialize show
     show = Show(display, animations)
