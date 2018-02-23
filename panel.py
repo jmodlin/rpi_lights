@@ -40,36 +40,36 @@ class Panel:
             self.leds[i] = c
 
     def setFullLeftColor(self, c):
-        beginRange = int(self.leftFullRange[0])
-        endRange = int(self.leftFullRange[1])
+        beginRange = self.leftFullRange[0]
+        endRange = self.leftFullRange[1]
         self.setRangeColor(beginRange, endRange, c)
-        beginRange = int(self.leftFullRange[2])
-        endRange = int(self.leftFullRange[3])
+        beginRange = self.leftFullRange[2]
+        endRange = self.leftFullRange[3]
         self.setRangeColor(beginRange, endRange, c)
 
     def setFullRightColor(self, c):
-        beginRange = int(self.rightFullRange[0])
-        endRange = int(self.rightFullRange[1])
+        beginRange = self.rightFullRange[0]
+        endRange = self.rightFullRange[1]
         self.setRangeColor(beginRange, endRange, c)
 
     def setLeftColor(self, c):
-        beginRange = 0
-        endRange = self.pixels/4
+        beginRange = self.leftRange[0]
+        endRange = self.leftRange[1]
         self.setRangeColor(beginRange, endRange, c)
 
     def setTopColor(self, c):
-        beginRange = self.pixels/4
-        endRange = self.pixels/4 + self.pixels/4
+        beginRange = self.topRange[0]
+        endRange = self.topRange[1]
         self.setRangeColor(beginRange, endRange, c)
 
     def setRightColor(self, c):
-        beginRange = 2*self.pixels/4
-        endRange = 2*self.pixels/4 + self.pixels/4
+        beginRange = self.rightRange[0]
+        endRange = self.rightRange[1]
         self.setRangeColor(beginRange, endRange, c)
     
     def setBottomColor(self, c):
-        beginRange = 3*self.pixels/4
-        endRange = 3*self.pixels/4 + self.pixels/4
+        beginRange = self.bottomRange[0]
+        endRange = self.bottomRange[1]
         self.setRangeColor(beginRange, endRange, c)
 
     def rotateCW(self, n):
