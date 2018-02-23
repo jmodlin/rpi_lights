@@ -80,9 +80,11 @@ class Shimmer(Animation):
             pos = 0
             for p in self.display.panels:
                 
-                # (i%len(colors)) +
+                print 'pos -> ' + `pos` + ' .. i -> ' + `i`
                 lColor = (i+pos)%len(self.colors) 
+                print 'lcolor -> ' + `lColor`
                 rColor = (i+pos+1)%len(self.colors)
+                print 'rcolor -> ' + `rColor`
                 
                 p.setFullLeftColor(self.colors[lColor])
                 p.setFullRightColor(self.colors[rColor])    
