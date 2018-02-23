@@ -36,8 +36,10 @@ if __name__ == '__main__':
     redblinky = Blink(display, Color(255,0,0), 10, 250)
     greenblinky = Blink(display, Color(0,255,0), 10, 250)
     kitt = Kitt(display, Color(255,0,0), 20, 300)
+    shimmer = Shimmer(display, Color(255, 255, 0), Color(0, 255, 170), 50, 100)
+
     #animations = [redblinky, greenblinky, kitt]
-    animations = [kitt]
+    animations = [shimmer]
 
     # Initialize show
     show = Show(display, animations)

@@ -64,3 +64,30 @@ class Kitt(Animation):
     def end(self):
         self.display.clear()
         
+class Shimmer(Animation):
+
+    def __init__(self, display, c1, c2, iterations, ms):
+        Animation.__init__(self, display)
+        self.color1 = c1
+        self.color2 = c2
+        self.iterations = iterations
+        self.ms = ms
+
+    def begin(self):
+        Animation.begin(self)
+        
+        for i in range(self.iterations):
+            for p in self.display.panels:
+                p.setLeftColor(self.color1)
+                p.setRightColor(self.color2)
+            self.display.update()
+            time.sleep(self.ms/1000.0)
+
+            for p in self.display.panels:
+                p.setLeftColor(self.color2)
+                p.setRightColor(self.color1)
+            self.display.update()
+            time.sleep(self.ms/1000.0)
+            
+    def end(self):
+        self.display.clear()
