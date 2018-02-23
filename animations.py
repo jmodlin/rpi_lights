@@ -51,13 +51,13 @@ class Rocker(Animation):
 
         for i in range(self.iterations):
             
-            for r in range(self.display.numPixels):
+            for r in range(self.display.pixelsPerPanel):
                 for p in panels:
                         p.rotateCW(1)
                 self.display.update()
                 time.sleep(self.ms/1000.0)
 
-            for r in range(self.display.numPixels):
+            for r in range(self.display.pixelsPerPanel):
                 for p in panels:
                         p.rotateCCW(1)
                 self.display.update()

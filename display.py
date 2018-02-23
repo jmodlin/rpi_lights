@@ -37,6 +37,9 @@ class Display:
         # How many panels are there?
         self.numPanels = len(self.panels)
 
+        # Pixels per panel (ppp)
+        self.pixelsPerPanel = ppp
+
     def update(self):
         self.strip.show()
 
