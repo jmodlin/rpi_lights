@@ -40,6 +40,10 @@ class Display:
         # Pixels per panel (ppp)
         self.pixelsPerPanel = ppp
 
+    def setBrightness(self, brightness):
+        if brightness >= 0 and brightness <= 255:
+            self.strip.setBrightness(brightness)
+
     def update(self):
         self.strip.show()
 

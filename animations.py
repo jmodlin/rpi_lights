@@ -3,6 +3,8 @@ import time
 import random
 import signal
 import sys
+import math
+import datetime 
 
 # Custom objects
 from panel import *
@@ -26,9 +28,12 @@ class Blink(Animation):
             time.sleep(self.ms/1000.0)
             self.display.clear()
             time.sleep(self.ms/1000.0)
+        
+        # Finished
+        self.end()
 
     def end(self):
-        self.display.clear()
+        Animation.end(self)
         
 class Rocker(Animation):
 
@@ -62,9 +67,12 @@ class Rocker(Animation):
                         p.rotateCCW(1)
                 self.display.update()
                 time.sleep(self.ms/1000.0)
+        
+        # Finished
+        self.end()
 
     def end(self):
-        self.display.clear()
+        Animation.end(self)
 
 class Kitt(Animation):
 
@@ -97,8 +105,11 @@ class Kitt(Animation):
                 print('p->' + `p` + ' .. delay->' + `delay`)
                 time.sleep(delay)
 
+        # Finished
+        self.end()
+
     def end(self):
-        self.display.clear()
+        Animation.end(self)
         
 class Shimmer(Animation):
 
@@ -127,6 +138,46 @@ class Shimmer(Animation):
             pos += 1
             self.display.update()
             time.sleep(self.ms/1000.0)
+        
+        # Finished
+        self.end()
             
     def end(self):
-        self.display.clear()
+        Animation.end(self)
+
+class Breathing(Animation):
+
+    def __init__(self, display, colors, iterations, ms):
+        Animation.__init__(self, display)
+        self.colors = colors
+        self.iterations = iterations
+        self.ms = ms
+
+    def begin(self):
+        Animation.begin(self)
+ 
+        # Set light colors
+        c = 0
+        for p in self.display.panels:
+            p.setPanelColor(c%len(self.colors))
+            c += 1
+
+        # Start increase/decrease brightness
+        i = 0 
+        start = datetime.datetime.now()
+        while i < self.iterations:
+            
+            # Breathing calculation - Thanks to Sean Voisen
+            # URL - http://sean.voisen.org/blog/2011/10/breathing-led-with-arduino/
+            elapsed_ms = (datetime.datetime.now() - start) .total_seconds() * 1000
+            brightness = int((math.exp(math.sin(elapsed_ms/2000.0*math.pi)) - 0.36787944) * 108.0)
+
+            self.display.setBrightness(brightness)
+            self.display.update()
+            time.sleep(self.ms/1000.0)
+
+        # Finished
+        self.end()
+            
+    def end(self):
+        Animation.end(self)

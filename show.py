@@ -41,10 +41,11 @@ if __name__ == '__main__':
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
     colors = [Color(0, 255, 10), Color(255, 215, 0)]
     shimmer = Shimmer(display, colors, 50, 600)
-
     rocker = Rocker(display, Color(0,255,10), Color(255,215,0), 20, 20)
-    #animations = [redblinky, greenblinky, kitt]
-    animations = [redblinky, greenblinky, kitt, shimmer, rocker]
+    
+    breath = Breathing(display, [Color(255, 0, 0)], 5000, 10)
+
+    animations = [greenblinky, kitt, shimmer, rocker, breath]
 
     # Initialize show
     show = Show(display, animations)

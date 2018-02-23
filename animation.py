@@ -18,6 +18,7 @@ class Animation:
         self.display.clear()
         
     def end(self):
+        print ('Finishing ' + self.__class__.__name__ + ' animation')
         self.display.clear()
         
 
