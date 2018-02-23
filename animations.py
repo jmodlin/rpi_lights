@@ -78,14 +78,14 @@ class Shimmer(Animation):
         
         for i in range(self.iterations):
             for p in self.display.panels:
-                p.setLeftColor(self.color1)
-                p.setRightColor(self.color2)
+                p.setFullLeftColor(self.color1)
+                p.setFullRightColor(self.color2)
             self.display.update()
             time.sleep(self.ms/1000.0)
 
             for p in self.display.panels:
-                p.setLeftColor(self.color2)
-                p.setRightColor(self.color1)
+                p.setFullLeftColor(self.color2)
+                p.setFullRightColor(self.color1)
             self.display.update()
             time.sleep(self.ms/1000.0)
             
