@@ -180,7 +180,7 @@ if __name__ == '__main__':
                 time.sleep(1.5)
                 c = Color(0, 0, 0)
                 for p in panels:
-                        p.setColor(c)
+                        p.setPanelColor(c)
                         strip.show()
                         time.sleep(t)
                 
