@@ -35,12 +35,12 @@ if __name__ == '__main__':
     # Initialize animations for show
     redblinky = Blink(display, Color(255,0,0), 10, 250)
     greenblinky = Blink(display, Color(0,255,0), 10, 250)
-    kitt = Kitt(display, Color(255,0,0), 20, 300)
+    kitt = Kitt(display, Color(255,0,0), 5, 300)
 
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214), Color(255, 255, 255), Color(255, 255, 255)]
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
     colors = [Color(0, 255, 10), Color(255, 215, 0)]
-    shimmer = Shimmer(display, colors, 150, 600)
+    shimmer = Shimmer(display, colors, 50, 600)
 
     rocker = Rocker(display, Color(0,255,10), Color(255,215,0), 20, 20)
     #animations = [redblinky, greenblinky, kitt]
