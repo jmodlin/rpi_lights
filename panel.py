@@ -15,6 +15,7 @@ class Panel:
         self.bottomRange = [(self.sideLen * 3) + 1, self.pixels]
         self.leftFullRange = [0, self.sideLen * 1.5, self.pixels - self.sideLen/2, self.pixels]
         self.rightFullRange = [(self.sideLen * 1.5) + 1, self.pixels - self.sideLen/2 - 1]
+        print ('lfr -> ' + `self.leftFullRange` + ' .. rfr -> ' + `self.rightFullRange`)
 
     def setPixelColor(self, idx, c):
         self.strip.setPixelColor(self.idx*self.pixels+idx, c) 
