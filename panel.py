@@ -26,7 +26,7 @@ class Panel:
             self.leds[i] = c
 
     def setRangeColor(self, b, e, c):
-        for i in range(b, e):
+        for i in range(b, e+1):
             self.strip.setPixelColor(self.idx*self.pixels+i, c)
             self.leds[i] = c
 
