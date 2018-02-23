@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214), Color(255, 255, 255), Color(255, 255, 255)]
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
-    colors = [Color(80, 200, 120), Color(255, 215, 0)]
+    colors = [Color(0, 154, 73), Color(255, 215, 0)]
     shimmer = Shimmer(display, colors, 150, 600)
 
     #animations = [redblinky, greenblinky, kitt]
