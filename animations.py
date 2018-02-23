@@ -78,7 +78,6 @@ class Shimmer(Animation):
         pos = 0
         for i in range(self.iterations):
     
-            print '.. start panels ..'
             c = pos
             for p in self.display.panels:
                 
