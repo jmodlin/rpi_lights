@@ -26,6 +26,7 @@ class Animation:
             self.display.update()
             time.sleep(0.001)
         self.display.clear()
+        time.sleep(0.5)
         
 
 
