@@ -171,7 +171,6 @@ class Breathing(Animation):
             # URL - http://sean.voisen.org/blog/2011/10/breathing-led-with-arduino/
             elapsed_ms = (datetime.datetime.now() - start) .total_seconds() * 1000
             brightness = int((math.exp(math.sin(elapsed_ms/2000.0*math.pi)) - 0.36787944) * 108.0)
-            print ('brightness -> ' + `brightness`)
             self.display.setBrightness(brightness)
             self.display.update()
             time.sleep(self.ms/1000.0)
