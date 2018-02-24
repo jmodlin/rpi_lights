@@ -40,12 +40,14 @@ if __name__ == '__main__':
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214), Color(255, 255, 255), Color(255, 255, 255)]
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
     colors = [Color(0, 255, 10), Color(255, 215, 0)]
-    shimmer = Shimmer(display, colors, 50, 600)
-    rocker = Rotator(display, Color(0,255,10), Color(255,215,0), False, 5, 100)
+    
+    
 
     # St. Patrick's Day colors    
-    colors = [Color(0,255,10), Color(255,215,0)]
-    breath = Breathing(display, colors, 1000, 20)
+    colors = [Color(0,255,10), Color(255,215,0), Color(255,215,0), Color(0,255,10)]
+    shimmer = Shimmer(display, colors, 50, 600)
+    breath = Breathing(display, colors[:2], 1000, 20)
+    rocker = Rotator(display, colors[0], colors[1], False, 5, 100)
 
     animations = [rocker, shimmer, breath]
 
