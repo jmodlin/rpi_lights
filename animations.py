@@ -35,9 +35,9 @@ class Blink(Animation):
     def end(self):
         Animation.end(self)
         
-class Rocker(Animation):
+class Rotator(Animation):
 
-    def __init__(self, display, c1, c2, iterations, ms):
+    def __init__(self, display, c1, c2, rocker=False, iterations, ms):
         Animation.__init__(self, display)
         self.color1 = c1
         self.color2 = c2
@@ -62,12 +62,13 @@ class Rocker(Animation):
                 self.display.update()
                 time.sleep(self.ms/1000.0)
 
-            for r in range(self.display.pixelsPerPanel):
-                for p in self.display.panels:
-                        p.rotateCCW(1)
-                self.display.update()
-                time.sleep(self.ms/1000.0)
-        
+            if rocker:
+                for r in range(self.display.pixelsPerPanel):
+                    for p in self.display.panels:
+                            p.rotateCCW(1)
+                    self.display.update()
+                    time.sleep(self.ms/1000.0)
+            
         # Finished
         self.end()
 
