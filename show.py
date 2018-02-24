@@ -44,7 +44,7 @@ if __name__ == '__main__':
     rocker = Rocker(display, Color(0,255,10), Color(255,215,0), 20, 20)
     
     colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
-    breath = Breathing(display, colors, 500, 10)
+    breath = Breathing(display, colors, 50, 10)
 
     animations = [breath, kitt]
 
