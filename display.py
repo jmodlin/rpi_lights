@@ -44,6 +44,9 @@ class Display:
         if brightness >= 0 and brightness <= 255:
             self.strip.setBrightness(brightness)
 
+    def getBrightness(self):
+        self.strip.getBrightness()
+
     def update(self):
         self.strip.show()
 
