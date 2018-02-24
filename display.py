@@ -45,7 +45,7 @@ class Display:
             self.strip.setBrightness(brightness)
 
     def getBrightness(self):
-        self.strip.getBrightness()
+        return self.strip.getBrightness()
 
     def update(self):
         self.strip.show()
