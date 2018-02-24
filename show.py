@@ -42,7 +42,7 @@ if __name__ == '__main__':
     colors = [Color(0, 255, 10), Color(255, 215, 0)]
     
     # Christmas colors
-    xmasColors = [Color(255, 0, 0), Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214), Color(255, 255, 255)]
+    xmasColors = [Color(255, 0, 0), Color(0, 255, 0), Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214)]
 
     # Halloween colors
 
@@ -56,9 +56,9 @@ if __name__ == '__main__':
     shimmer2 = Shimmer(display, stPatColors[:2], 50, 600)
 
     xmasshimmer1 = Shimmer(display, xmasColors, 50, 600)
-    xmasbreath = Breathing(display, xmasColors[:2], 1000, 20)
+    xmasbreath = Breathing(display, xmasColors[1:2], 1000, 20)
     xmasrocker = Rotator(display, xmasColors[0], colors[1], False, 5, 100)
-    xmasshimmer2 = Shimmer(display, xmasColors[:2], 50, 600)
+    xmasshimmer2 = Shimmer(display, xmasColors[1:2], 50, 600)
     
     
     animations = [rocker, shimmer1, breath, shimmer2, xmasrocker, xmasshimmer1, xmasbreath, xmasshimmer2]
