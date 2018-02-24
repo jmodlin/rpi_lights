@@ -41,6 +41,7 @@ class Rotator(Animation):
         Animation.__init__(self, display)
         self.color1 = c1
         self.color2 = c2
+        self.rocker = rocker
         self.iterations = iterations
         self.ms = ms
 
@@ -62,7 +63,7 @@ class Rotator(Animation):
                 self.display.update()
                 time.sleep(self.ms/1000.0)
 
-            if rocker:
+            if self.rocker:
                 for r in range(self.display.pixelsPerPanel):
                     for p in self.display.panels:
                             p.rotateCCW(1)
