@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
     xmasshimmer1 = Shimmer(display, xmasColors, 50, 600)
     xmasbreath = Breathing(display, xmasColors[:2], 1000, 20)
-    xmasrocker = Rotator(display, xmasColors[0], xmascolors[1], False, 5, 100)
+    xmasrocker = Rotator(display, xmasColors[0], xmasColors[1], False, 5, 100)
     xmasshimmer2 = Shimmer(display, xmasColors[:2], 50, 600)
     
     
