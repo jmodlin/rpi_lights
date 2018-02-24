@@ -37,7 +37,7 @@ class Blink(Animation):
         
 class Rotator(Animation):
 
-    def __init__(self, display, c1, c2, rocker=False, iterations, ms):
+    def __init__(self, display, c1, c2, rocker, iterations, ms):
         Animation.__init__(self, display)
         self.color1 = c1
         self.color2 = c2
