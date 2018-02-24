@@ -41,16 +41,27 @@ if __name__ == '__main__':
     #colors = [Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214)]
     colors = [Color(0, 255, 10), Color(255, 215, 0)]
     
-    
+    # Christmas colors
+    xmasColors = [Color(255, 0, 0), Color(212, 36, 38), Color(36, 214, 211), Color(39, 214, 36), Color(211, 36, 214), Color(122, 36, 214), Color(255, 255, 255)]
+
+    # Halloween colors
 
     # St. Patrick's Day colors    
-    colors = [Color(0,255,10), Color(255,215,0), Color(255,215,0), Color(0,255,10)]
-    shimmer1 = Shimmer(display, colors, 50, 600)
-    breath = Breathing(display, colors[:2], 1000, 20)
-    rocker = Rotator(display, colors[0], colors[1], False, 5, 100)
-    shimmer2 = Shimmer(display, colors[:2], 50, 600)
+    stPatColors = [Color(0,255,10), Color(255,215,0), Color(255,215,0), Color(0,255,10)]
 
-    animations = [rocker, shimmer1, breath, shimmer2]
+    
+    shimmer1 = Shimmer(display, stPatColors, 50, 600)
+    breath = Breathing(display, stPatColors[:2], 1000, 20)
+    rocker = Rotator(display, stPatColors[0], colors[1], False, 5, 100)
+    shimmer2 = Shimmer(display, stPatColors[:2], 50, 600)
+
+    xmasshimmer1 = Shimmer(display, xmasColors, 50, 600)
+    xmasbreath = Breathing(display, xmasColors[:2], 1000, 20)
+    xmasrocker = Rotator(display, xmasColors[0], colors[1], False, 5, 100)
+    xmasshimmer2 = Shimmer(display, xmasColors[:2], 50, 600)
+    
+    
+    animations = [rocker, shimmer1, breath, shimmer2, xmasrocker, xmasshimmer1, xmasbreath, xmasshimmer2]
 
     # Initialize show
     show = Show(display, animations)
