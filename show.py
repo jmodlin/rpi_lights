@@ -45,11 +45,12 @@ if __name__ == '__main__':
 
     # St. Patrick's Day colors    
     colors = [Color(0,255,10), Color(255,215,0), Color(255,215,0), Color(0,255,10)]
-    shimmer = Shimmer(display, colors, 50, 600)
+    shimmer1 = Shimmer(display, colors, 50, 600)
     breath = Breathing(display, colors[:2], 1000, 20)
     rocker = Rotator(display, colors[0], colors[1], False, 5, 100)
+    shimmer2 = Shimmer(display, colors[:2], 50, 600)
 
-    animations = [rocker, shimmer, breath]
+    animations = [rocker, shimmer1, breath, shimmer2]
 
     # Initialize show
     show = Show(display, animations)
