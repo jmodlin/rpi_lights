@@ -52,12 +52,12 @@ if __name__ == '__main__':
     
     shimmer1 = Shimmer(display, stPatColors, 50, 600)
     breath = Breathing(display, stPatColors[:2], 1000, 20)
-    rocker = Rotator(display, stPatColors[0], colors[1], False, 5, 100)
+    rocker = Rotator(display, stPatColors[0], stPatColors[1], False, 5, 100)
     shimmer2 = Shimmer(display, stPatColors[:2], 50, 600)
 
     xmasshimmer1 = Shimmer(display, xmasColors, 50, 600)
     xmasbreath = Breathing(display, xmasColors[:2], 1000, 20)
-    xmasrocker = Rotator(display, xmasColors[0], colors[1], False, 5, 100)
+    xmasrocker = Rotator(display, xmasColors[0], xmascolors[1], False, 5, 100)
     xmasshimmer2 = Shimmer(display, xmasColors[:2], 50, 600)
     
     
