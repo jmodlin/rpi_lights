@@ -173,6 +173,7 @@ class Breathing(Animation):
             self.display.setBrightness(brightness)
             self.display.update()
             time.sleep(self.ms/1000.0)
+            i += 1
 
         # Finished
         self.end()
