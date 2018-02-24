@@ -12,9 +12,10 @@ class Animation:
 
     def __init__(self, display):
         self.display = display
-    
+        
     def begin(self):
         print ('Starting ' + self.__class__.__name__ + ' animation')
+        self.display.setBrightness(255)
         self.display.clear()
         
     def end(self):
