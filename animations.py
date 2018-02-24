@@ -93,7 +93,6 @@ class Kitt(Animation):
                 self.display.panels[p].setPanelColor(self.color)
                 self.display.update()
                 delay = (self.ms/1000.0) * ((p+1)/(self.display.numPanels * 1.0))
-                print('p->' + `p` + ' .. delay->' + `delay`)
                 time.sleep(delay)
             # Going down the panels
             for p in range(self.display.numPanels-1, -1, -1):
@@ -102,7 +101,6 @@ class Kitt(Animation):
                 self.display.panels[p].setPanelColor(self.color)
                 self.display.update()
                 delay = (self.ms/1000.0) * (1.0 - (p/(self.display.numPanels * 1.0)))
-                print('p->' + `p` + ' .. delay->' + `delay`)
                 time.sleep(delay)
 
         # Finished
@@ -159,7 +157,7 @@ class Breathing(Animation):
         # Set light colors
         c = 0
         for p in self.display.panels:
-            p.setPanelColor(c%len(self.colors))
+            p.setPanelColor(self.colors[c%len(self.colors)])
             c += 1
 
         # Start increase/decrease brightness
@@ -171,7 +169,7 @@ class Breathing(Animation):
             # URL - http://sean.voisen.org/blog/2011/10/breathing-led-with-arduino/
             elapsed_ms = (datetime.datetime.now() - start) .total_seconds() * 1000
             brightness = int((math.exp(math.sin(elapsed_ms/2000.0*math.pi)) - 0.36787944) * 108.0)
-
+            print ('brightness -> ' + `brightness`)
             self.display.setBrightness(brightness)
             self.display.update()
             time.sleep(self.ms/1000.0)
