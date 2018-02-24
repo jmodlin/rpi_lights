@@ -24,7 +24,7 @@ class Animation:
         for i in range(b, -1, -1):
             self.display.setBrightness(i)
             self.display.update()
-            time.sleep(0.01)
+            time.sleep(0.007)
         self.display.clear()
         
 
