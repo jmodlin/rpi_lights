@@ -47,7 +47,7 @@ if __name__ == '__main__':
     colors = [Color(0,255,10), Color(255,215,0)]
     breath = Breathing(display, colors, 1000, 20)
 
-    animations = [breath, kitt]
+    animations = [rocker, breath]
 
     # Initialize show
     show = Show(display, animations)
