@@ -1,6 +1,7 @@
 import math
 import datetime 
 import time
+from neopixel import *
 
 start = datetime.datetime.now()
 
