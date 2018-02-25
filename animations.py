@@ -158,7 +158,7 @@ class Whiteness(Animation):
         # Set light colors
         c = Color(255, 0, 0, 0)
         for p in self.display.panels:
-            p.setPanelColor(self.color)
+            p.setPanelColor(c)
            
         # Start increase/decrease brightness
         for i in range(iterations):
