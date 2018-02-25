@@ -33,7 +33,8 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_color=True)
     if inclusive:
         run = [start_color] + run + [end_color]
 
-    return run if not to_color else [Color(c) for c in run]
+    #return run if not to_color else [Color(c) for c in run]
+    return run
 
 
 print ('Color merging ...')
