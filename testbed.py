@@ -17,11 +17,11 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_color=True)
     :return: List of colors between the start and end color
     :rtype: list
     """
-    if isinstance(start_color, Color):
-        start_color = start_color.rgb
+    #if isinstance(start_color, Color):
+    #    start_color = start_color.rgb
 
-    if isinstance(end_color, Color):
-        end_color = end_color.rgb
+    #if isinstance(end_color, Color):
+    #    end_color = end_color.rgb
 
     step = tuple((end_color[i] - start_color[i])/step_count for i in range(3))
 
