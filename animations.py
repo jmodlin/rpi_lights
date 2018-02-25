@@ -145,6 +145,37 @@ class Shimmer(Animation):
     def end(self):
         Animation.end(self)
 
+class Whiteness(Animation):
+
+    def __init__(self, display, iterations, ms):
+        Animation.__init__(self, display)
+        self.iterations = iterations
+        self.ms = ms
+
+    def begin(self):
+        Animation.begin(self)
+ 
+        # Set light colors
+        c = Color(255, 0, 0, 0)
+        for p in self.display.panels:
+            p.setPanelColor(self.color)
+           
+        # Start increase/decrease brightness
+        for i in range(iterations):
+            
+            for p in self.display.panels:
+                c = Color(255, 0, 0, i%255)
+                p.setPanelColor(c)
+                
+            self.display.update()
+            time.sleep(self.ms/1000.0)
+            
+        # Finished
+        self.end()
+            
+    def end(self):
+        Animation.end(self)
+
 class Breathing(Animation):
 
     def __init__(self, display, colors, iterations, ms):
