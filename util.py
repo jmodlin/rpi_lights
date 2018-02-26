@@ -18,7 +18,7 @@ def color2rgb(color):
  
 def rgb2color(rgb):
     color = Color(rgb[0], rgb[1], rgb[2])
-    return c
+    return color
  
 def color_run(start_color, end_color, step_count, inclusive=True):
     """
