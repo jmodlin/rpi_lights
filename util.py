@@ -81,11 +81,11 @@ if __name__ == '__main__':
     c = rgb2color(rgb)
     print c
  
-    colors = color_run(Color(255,0,0), Color(0,212,255), 10, False)
+    colors = color_run(Color(255,0,0), Color(0,212,255), 10, True)
     print 'color_run ->'
     print colors
  
-    colors = color_run(Color(255,0,0), Color(255,0,255), 100, False)
+    colors = color_run(Color(255,0,0), Color(255,0,255), 100, True)
     print 'color_run ->'
     print colors
    
