@@ -13,7 +13,8 @@ from animation import *
 from display import *
  
 def color2rgb(color):
-    rgb = tuple(map(ord,hex(color)[2:].decode('hex')))
+    
+    rgb = tuple(map(ord,hex(color)[2:].zfill(6).decode('hex')))
     return rgb
  
 def rgb2color(rgb):
