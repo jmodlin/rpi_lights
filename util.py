@@ -88,4 +88,17 @@ if __name__ == '__main__':
     colors = color_run(Color(255,0,0), Color(255,0,255), 100, True)
     print 'color_run ->'
     print colors
+
+    # { title: 'Blinky thing', 
+    #   tick_ms: 100, 
+    #   sound_file: '',
+    #   effects: [
+    #       { effect: 'blink', 
+    #           tick_start: 0,
+    #           tick_end: 0,
+    #           z_index: 0, 
+    #           effect_params: {colors: [0], rocker: False},
+    #       }
+    # }
+    #
    
