@@ -42,9 +42,9 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True
     print('endColor =>'),
     print endColor
 
-    stepR = ((startColor[0] - endColor[0])/(step_count*1.0)) if startColor[0] >= endColor[0] else ((endColor[0] - startColor[0])/(step_count*-1.0))
-    stepG = ((startColor[1] - endColor[1])/(step_count*1.0)) if startColor[1] >= endColor[1] else ((endColor[1] - startColor[1])/(step_count*-1.0))
-    stepB = ((startColor[2] - endColor[2])/(step_count*1.0)) if startColor[2] >= endColor[2] else ((endColor[2] - startColor[2])/(step_count*-1.0))
+    stepR = ((startColor[0] - endColor[0])/(step_count*-1.0)) if startColor[0] >= endColor[0] else ((endColor[0] - startColor[0])/(step_count*1.0))
+    stepG = ((startColor[1] - endColor[1])/(step_count*-1.0)) if startColor[1] >= endColor[1] else ((endColor[1] - startColor[1])/(step_count*1.0))
+    stepB = ((startColor[2] - endColor[2])/(step_count*-1.0)) if startColor[2] >= endColor[2] else ((endColor[2] - startColor[2])/(step_count*1.0))
 
     print 'stepR ->' + `stepR`
     print 'stepG ->' + `stepG`
