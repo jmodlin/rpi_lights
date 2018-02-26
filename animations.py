@@ -151,7 +151,7 @@ class ColorMerge(Animation):
     def __init__(self, display, colors, steps, ms):
         Animation.__init__(self, display)
         self.colors = colors
-        self.iterations = iterations
+        self.steps = steps
         self.ms = ms
 
     def begin(self):
@@ -161,7 +161,7 @@ class ColorMerge(Animation):
             beginColor = self.colors[c]
             endColor = self.colors[c+1]
 
-            colorRange = color_run(beginColor, endColor, steps, True)
+            colorRange = color_run(beginColor, endColor, self.steps, True)
 
             for cr in colorRange:
                 for p in self.display.panels:
