@@ -52,7 +52,7 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True
 
     # Create run as array of RGB tuples
     run = []
-    for s in range(step_count):
+    for s in range(1, step_count+1):
         c = (startColor[0]+int(s*stepR), startColor[1]+int(s*stepG), startColor[2]+int(s*stepB))
         run.append(c)
     
