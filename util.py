@@ -53,7 +53,7 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True
         run = [startColor] + run + [endColor]
     print 'run->'
     print run
-    
+
     # Convert tuples array to array of color objects
     if to_colors:
         colors = []
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     c = rgb2color(rgb)
     print c
  
-    colors = color_run(Color(255,0,0), Color(0,212,255), 200, False)
+    colors = color_run(Color(255,0,0), Color(0,212,255), 100, False)
     print 'color_run ->'
     print colors
  
