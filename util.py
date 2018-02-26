@@ -50,13 +50,12 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True
     print 'stepG ->' + `stepG`
     print 'stepB ->' + `stepB`
 
-    step = tuple((endColor[i] - startColor[i])/step_count for i in range(3))
-    add = lambda x, y: tuple(sum(z) for z in zip(x, y))
-    mult = lambda x, y: tuple(y * z for z in x)
- 
     # Create run as array of RGB tuples
-    run = [add(startColor, mult(step, i)) for i in range(1, step_count)]
- 
+    run = []
+    for s in range(step_count):
+        c = (startColor[0]+int(s*stepR), startColor[1]+int(s*stepG), startColor[2]+int(s*stepB))
+        run.append(c)
+    
     if inclusive:
         run = [startColor] + run + [endColor]
     print 'run->'
