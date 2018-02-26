@@ -35,8 +35,12 @@ def color_run(start_color, end_color, step_count, inclusive=True):
  
     # Convert color value to RGB tuple
     startColor = color2rgb(start_color)
+    print('startColor =>'),
+    print startColor
     endColor = color2rgb(end_color)
- 
+    print('endColor =>'),
+    print endColor
+    
     step = tuple((endColor[i] - startColor[i])/step_count for i in range(3))
     add = lambda x, y: tuple(sum(z) for z in zip(x, y))
     mult = lambda x, y: tuple(y * z for z in x)
