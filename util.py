@@ -40,7 +40,7 @@ def color_run(start_color, end_color, step_count, inclusive=True):
     endColor = color2rgb(end_color)
     print('endColor =>'),
     print endColor
-    
+
     step = tuple((endColor[i] - startColor[i])/step_count for i in range(3))
     add = lambda x, y: tuple(sum(z) for z in zip(x, y))
     mult = lambda x, y: tuple(y * z for z in x)
@@ -70,8 +70,8 @@ if __name__ == '__main__':
     c = rgb2color(rgb)
     print c
  
-    #colors = color_run(Color(255,0,0), Color(0,212,255), 253)
-    #print 'color_run ->'
-    #print colors
+    colors = color_run(Color(255,0,0), Color(0,212,255), 20)
+    print 'color_run ->'
+    print colors
  
    
