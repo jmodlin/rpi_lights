@@ -66,7 +66,7 @@ if __name__ == '__main__':
     hallorocker = Rotator(display, halloweenColors[0], halloweenColors[1], False, 5, 100)
     halloshimmer2 = Shimmer(display, halloweenColors[:2], 50, 600)
 
-    cm = ColorMerge(display, halloweenColors, 20, 10)
+    cm = ColorMerge(display, colors, 100, 10)
 
     #animations = [rocker, shimmer1, breath, shimmer2, xmasrocker, xmasshimmer1, xmasbreath, xmasshimmer2, hallorocker, halloshimmer1, hallobreath, halloshimmer2]
     #animations = [rocker, shimmer1, breath, shimmer2]
