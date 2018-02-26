@@ -38,7 +38,7 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_color=True)
 
 
 print ('Color merging ...')
-colors = color_run((255,0,0), (0, 0, 255), 10)
+colors = color_run((255,0,0), (0, 212, 255), 200)
 print colors
 
 
