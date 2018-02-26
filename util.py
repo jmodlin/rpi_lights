@@ -51,7 +51,9 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True
  
     if inclusive:
         run = [startColor] + run + [endColor]
- 
+    print 'run->'
+    print run
+    
     # Convert tuples array to array of color objects
     if to_colors:
         colors = []
