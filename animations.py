@@ -10,6 +10,7 @@ import datetime
 from panel import *
 from animation import *
 from display import *
+from util import *
 
 class Blink(Animation):
 
@@ -145,31 +146,29 @@ class Shimmer(Animation):
     def end(self):
         Animation.end(self)
 
-class Whiteness(Animation):
+class ColorMerge(Animation):
 
-    def __init__(self, display, iterations, ms):
+    def __init__(self, display, colors, steps, ms):
         Animation.__init__(self, display)
+        self.colors = colors
         self.iterations = iterations
         self.ms = ms
 
     def begin(self):
         Animation.begin(self)
  
-        # Set light colors
-        c = Color(255, 0, 0, 0)
-        for p in self.display.panels:
-            p.setPanelColor(c)
-           
-        # Start increase/decrease brightness
-        for i in range(self.iterations):
-            
-            for p in self.display.panels:
-                c = Color(255, 0, 0, i%255)
-                p.setPanelColor(c)
-                
-            self.display.update()
-            time.sleep(self.ms/1000.0)
-            
+        for c in range(len(self.colors)-1):
+            beginColor = self.colors[c]
+            endColor = self.colors[c+1]
+
+            colorRange = color_run(beginColor, endColor, steps, True)
+
+            for cr in colorRange:
+                for p in self.display.panels:
+                    p.setPanelColor(cr)
+                self.display.update()
+                time.sleep(self.ms/1000.0)
+
         # Finished
         self.end()
             
