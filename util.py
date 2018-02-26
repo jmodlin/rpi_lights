@@ -21,7 +21,7 @@ def rgb2color(rgb):
     color = Color(rgb[0], rgb[1], rgb[2])
     return color
  
-def color_run(start_color, end_color, step_count, inclusive=True):
+def color_run(start_color, end_color, step_count, inclusive=True, to_colors=True):
     """
     Given a start color, end color, and a number of steps, returns a list of colors which represent a 'scale' between
     the start and end color.
@@ -53,12 +53,13 @@ def color_run(start_color, end_color, step_count, inclusive=True):
         run = [startColor] + run + [endColor]
  
     # Convert tuples array to array of color objects
-    colors = []
-    for c in run:
-        colors.append(Color(c[0], c[1], c[2]))
- 
-    return colors
- 
+    if to_colors:
+        colors = []
+        for c in run:
+            colors.append(Color(c[0], c[1], c[2]))
+        return colors
+    else:
+        return run
    
 # Main program logic follows:
 if __name__ == '__main__':
@@ -71,7 +72,7 @@ if __name__ == '__main__':
     c = rgb2color(rgb)
     print c
  
-    colors = color_run(Color(255,0,0), Color(0,212,255), 200)
+    colors = color_run(Color(255,0,0), Color(0,212,255), 200, False)
     print 'color_run ->'
     print colors
  
