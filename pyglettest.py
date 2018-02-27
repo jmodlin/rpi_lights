@@ -1,4 +1,4 @@
-from pyglet import *
+import pyglet
 
 pyglet.options['audio'] = ('openal', 'pulse', 'silent')
 
