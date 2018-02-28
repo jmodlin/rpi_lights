@@ -89,16 +89,32 @@ if __name__ == '__main__':
     print 'color_run ->'
     print colors
 
-    # { title: 'Blinky thing', 
+    #  color_merge -> None - Do nothing, the color in this effect should be left alone
+    #                 MergeBlack - If this effect has black pixels, merge them with effect color below
+    #                 MergeAll - Merge all pixes with effect color below
+    #                 ReplaceBlack - If this effect has black pixels, replace them with effect color below
+    #
+    # { title: 'Rachael Carson Bridge', 
     #   tick_ms: 100, 
     #   sound_file: '',
     #   effects: [
-    #       { effect: 'blink', 
+    #       { effect: 'background', 
     #           tick_start: 0,
     #           tick_end: 0,
     #           z_index: 0, 
+    #           color_merge: None,
+    #           panels: [p for p in range(24)],
+    #           effect_params: {colors: [0], rocker: False}
+    #       },
+    #       { effect: 'streak', 
+    #           tick_start: 0,
+    #           tick_end: 0,
+    #           z_index: 10,
+    #           color_merge: None,
+    #           panels: [] 
     #           effect_params: {colors: [0], rocker: False},
-    #       }
+    #       }]
     # }
+    #
     #
    
