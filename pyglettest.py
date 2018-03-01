@@ -9,7 +9,7 @@ def main():
     while True:
         ev = pygame.event.poll()
 
-        if ev.type == locals.QUIT
+        if ev.type == locals.QUIT:
             break
         
         if ev.type == locals.KEYDOWN:
