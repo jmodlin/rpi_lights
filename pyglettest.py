@@ -8,8 +8,6 @@ def quit():
     pygame.quit()
 
 def main():
-    pygame.init()
-
     print 'Starting game loop ...'
     while True:
     
@@ -24,7 +22,7 @@ def main():
         
     pygame.quit()
 
-
+pygame.init()
 print ('loading music file ...')
 pygame.mixer.init()
 pygame.mixer.music.load('/media/share/Game_Room.mp3')
