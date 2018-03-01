@@ -13,7 +13,7 @@ def main():
     print 'Starting game loop ...'
     while True:
     
-        ev = pygame.event.poll()
+        ev = pygame.event.get()
         
         if ev.type == KEYDOWN:
                 key_name = pygame.key.name(ev.key)
