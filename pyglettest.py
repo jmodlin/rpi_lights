@@ -14,7 +14,7 @@ def main():
     while True:
     
         print pygame.time.get_ticks()
-        
+
         for ev in pygame.event.get():
             print ('ev ->' + `ev`)
             if ev.type == KEYDOWN:
@@ -24,4 +24,12 @@ def main():
         
     pygame.quit()
 
-main()
+
+pygame.mixer.init()
+pygame.mixer.music.load('/media/share/Game_Room.mp3')
+pygame.mixer.music.play()
+
+while pygame.mixer.music.get_busy(): 
+    pygame.time.Clock().tick(10)
+
+    
