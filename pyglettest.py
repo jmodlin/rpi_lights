@@ -23,7 +23,7 @@ def main():
         
     pygame.quit()
 
-os.environ["SDL_VIDEODRIVER"] = "fbcon"
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
 pygame.display.init()
@@ -38,7 +38,7 @@ pygame.mixer.music.play()
 while pygame.mixer.music.get_busy(): 
     pygame.time.Clock().tick(10)
     for event in pygame.event.get():
-        print event
+        print 'event -> ' + `event`
 
 
 print ('done')
