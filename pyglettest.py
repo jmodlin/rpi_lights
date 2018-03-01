@@ -23,6 +23,7 @@ def main():
         
     pygame.quit()
 
+os.putenv('SDL_VIDEODRIVER', 'fbcon')
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
