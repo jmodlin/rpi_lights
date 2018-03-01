@@ -1,6 +1,11 @@
 
+import sys
 import pygame
 from pygame.locals import *
+
+
+def quit():
+    sys.exit()
 
 def main():
     pygame.init()
@@ -8,13 +13,11 @@ def main():
 
     while True:
         ev = pygame.event.poll()
-
-        if ev.type == QUIT:
-            break
         
         if ev.type == KEYDOWN:
                 key_name = pygame.key.name(ev.key)
-                print key_name
+                if key_name == 'q':
+                    quit()
     pygame.quit()
 
 main()
