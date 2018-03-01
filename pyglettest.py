@@ -31,5 +31,8 @@ pygame.mixer.music.play()
 
 while pygame.mixer.music.get_busy(): 
     pygame.time.Clock().tick(10)
+    for event in pygame.event.get():
+        print event
+        
 
 print ('done')
