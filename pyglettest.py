@@ -9,11 +9,11 @@ def main():
     while True:
         ev = pygame.event.poll()
 
-        if ev.type == locals.QUIT:
+        if ev.type == QUIT:
             break
         
-        if ev.type == locals.KEYDOWN:
-                key_name = pygame.key.name(event.key)
+        if ev.type == KEYDOWN:
+                key_name = pygame.key.name(ev.key)
                 print key_name
     pygame.quit()
 
