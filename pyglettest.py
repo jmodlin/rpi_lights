@@ -23,6 +23,9 @@ def main():
     pygame.quit()
 
 pygame.init()
+pygame.display.init()
+screen = pygame.display.set_mode((1,1))
+
 print ('loading music file ...')
 pygame.mixer.init()
 pygame.mixer.music.load('/media/share/Game_Room.mp3')
@@ -33,6 +36,6 @@ while pygame.mixer.music.get_busy():
     pygame.time.Clock().tick(10)
     for event in pygame.event.get():
         print event
-        
+
 
 print ('done')
