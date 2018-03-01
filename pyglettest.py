@@ -13,6 +13,8 @@ def main():
     print 'Starting game loop ...'
     while True:
     
+        print pygame.time.get_ticks()
+        
         for ev in pygame.event.get():
             print ('ev ->' + `ev`)
             if ev.type == KEYDOWN:
