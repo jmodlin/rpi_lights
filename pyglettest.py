@@ -28,6 +28,7 @@ def main():
 print ('loading music file ...')
 pygame.mixer.init()
 pygame.mixer.music.load('/media/share/Game_Room.mp3')
+pygame.mixer.music.set_volume(0.8)
 pygame.mixer.music.play()
 
 while pygame.mixer.music.get_busy(): 
