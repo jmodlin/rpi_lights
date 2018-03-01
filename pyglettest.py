@@ -1,4 +1,5 @@
 
+import os
 import sys
 import pygame
 from pygame.locals import *
@@ -21,6 +22,8 @@ def main():
                         quit()
         
     pygame.quit()
+
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
 pygame.display.init()
