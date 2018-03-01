@@ -14,6 +14,7 @@ def main():
     while True:
     
         for ev in pygame.event.get():
+            print ('ev ->' + `ev`)
             if ev.type == KEYDOWN:
                     print 'keydown -> ' + ev.key
                     if ev.key == K_q:
