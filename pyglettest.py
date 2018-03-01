@@ -15,9 +15,8 @@ def main():
     
         for ev in pygame.event.get():
             if ev.type == KEYDOWN:
-                    key_name = pygame.key.name(ev.key)
-                    print 'keydown -> ' + `key_name`
-                    if key_name == 'q':
+                    print 'keydown -> ' + ev.key
+                    if ev.key == K_q:
                         quit()
         
     pygame.quit()
