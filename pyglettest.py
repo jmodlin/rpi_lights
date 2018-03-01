@@ -13,14 +13,13 @@ def main():
     print 'Starting game loop ...'
     while True:
     
-        ev = pygame.event.get()
+        for ev in pygame.event.get():
+            if ev.type == KEYDOWN:
+                    key_name = pygame.key.name(ev.key)
+                    print 'keydown -> ' + `key_name`
+                    if key_name == 'q':
+                        quit()
         
-        if ev.type == KEYDOWN:
-                key_name = pygame.key.name(ev.key)
-                print 'keydown -> ' + `key_name`
-                if key_name == 'q':
-                    quit()
-    
     pygame.quit()
 
 main()
