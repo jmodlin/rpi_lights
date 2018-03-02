@@ -1,31 +1,30 @@
-import os, sys
-from pygame.locals import *
-import pygame.display
-# set SDL to use the dummy NULL video driver, 
-#   so it doesn't need a windowing system.
-
-os.environ["SDL_VIDEODRIVER"] = "dummy"
-
-print (os.environ['SDL_VIDEODRIVER'])
-
-
-if 1:
-    #some platforms might need to init the display for some parts of pygame.
-
     
-    pygame.display.init()
-    screen = pygame.display.set_mode((1,1))
-    pygame.time.set_timer(USEREVENT+1, 5000)
+import os
+import pygame
+
+drivers = ('directfb', 'fbcon', 'svgalib')
+
 
 def quit():
     print ('quiting!!')
     pygame.quit()
 
-if __name__ == "__main__":
-    
-    print ('starting game loop ...')
-    while True:
-        for event in pygame.event.get():
-            if event.type == USEREVENT+1:
-                quit()
+found = False
+for driver in drivers:
+    print "Trying \'" + driver + "\'",
+    if not os.getenv('SDL_VIDEODRIVER'):
+        os.putenv('SDL_VIDEODRIVER',driver)
+    try:
+        pygame.display.init()
+    except pygame.error:
+        print 'failed'
+        continue
+    found = True
+    break
+if not found:
+    raise Exception('No suitable video driver found.')
 
+
+print "success"
+size = (pygame.display.Info().current_w, pygame.display.Info().current_h)
+screen = pygame.display.set_mode(size, pygame.FULLSCREEN)
