@@ -38,7 +38,7 @@ while True:
 
 
     for event in pygame.event.get():
-        print ('ev ->' + `ev`)
+        print ('ev ->' + `event`)
         if event.type == USEREVENT+1:
                 quit()
         if event.type == KEYDOWN:
