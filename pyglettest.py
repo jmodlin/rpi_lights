@@ -37,7 +37,7 @@ while True:
 
 
 
-    for ev in pygame.event.get():
+    for event in pygame.event.get():
         print ('ev ->' + `ev`)
         if event.type == USEREVENT+1:
                 quit()
