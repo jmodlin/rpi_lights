@@ -8,7 +8,7 @@ drivers = ('directfb', 'fbcon', 'svgalib')
 
 def quit():
     print ('quiting!!')
-    pygame.quit()
+    #pygame.quit()
 
 found = False
 for driver in drivers:
