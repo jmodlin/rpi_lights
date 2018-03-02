@@ -14,14 +14,14 @@ if 1:
     os.putenv('SDL_VIDEODRIVER', 'fbcon')
     pygame.display.init()
     screen = pygame.display.set_mode((1,1))
-
-
+    pygame.time.set_timer(USEREVENT+1, 5000)
 
 def quit():
     pygame.quit()
 
 if __name__ == "__main__":
     
+
     while True:
         for event in pygame.event.get():
             if event.type == USEREVENT+1:
