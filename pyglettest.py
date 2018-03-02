@@ -4,9 +4,9 @@ import pygame.display
 # set SDL to use the dummy NULL video driver, 
 #   so it doesn't need a windowing system.
 
-print (os.environ['SDL_VIDEODRIVER'])
-
 os.environ["SDL_VIDEODRIVER"] = "dummy"
+
+print (os.environ['SDL_VIDEODRIVER'])
 
 
 if 1:
