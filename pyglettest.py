@@ -28,3 +28,17 @@ if not found:
 print "success"
 size = (pygame.display.Info().current_w, pygame.display.Info().current_h)
 screen = pygame.display.set_mode(size, pygame.FULLSCREEN)
+
+print 'Starting game loop ...'
+while True:
+
+    print pygame.time.get_ticks()
+
+    for ev in pygame.event.get():
+        print ('ev ->' + `ev`)
+        if ev.type == KEYDOWN:
+                print 'keydown -> ' + ev.key
+                if ev.key == K_q:
+                    quit()
+    
+ 
