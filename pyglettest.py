@@ -41,9 +41,9 @@ while True:
         print ('ev ->' + `ev`)
         if event.type == USEREVENT+1:
                 quit()
-        if ev.type == KEYDOWN:
-                print 'keydown -> ' + ev.key
-                if ev.key == K_q:
+        if event.type == KEYDOWN:
+                print 'keydown -> ' + event.key
+                if event.key == K_q:
                     quit()
     
  
