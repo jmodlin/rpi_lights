@@ -3,8 +3,11 @@ from pygame.locals import *
 import pygame.display
 # set SDL to use the dummy NULL video driver, 
 #   so it doesn't need a windowing system.
-os.environ["SDL_VIDEODRIVER"] = "directfb"
-os.putenv('SDL_VIDEODRIVER', 'fbcon')
+
+print os.environ['SDL_VIDERDRIVER']
+
+os.environ["SDL_VIDEODRIVER"] = "dummy"
+os.putenv('SDL_VIDEODRIVER', 'dummy')
 
 if 1:
     #some platforms might need to init the display for some parts of pygame.
