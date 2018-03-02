@@ -1,4 +1,5 @@
 import os, sys
+from pygame.locals import *
 
 # set SDL to use the dummy NULL video driver, 
 #   so it doesn't need a windowing system.
@@ -17,11 +18,12 @@ if 1:
     pygame.time.set_timer(USEREVENT+1, 5000)
 
 def quit():
+    print ('quiting!!')
     pygame.quit()
 
 if __name__ == "__main__":
     
-
+    print ('starting game loop ...')
     while True:
         for event in pygame.event.get():
             if event.type == USEREVENT+1:
