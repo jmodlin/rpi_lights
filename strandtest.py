@@ -69,8 +69,7 @@ def writeColor(c):
 
 def rainbow(strip, wait_ms=20, iterations=1):
 	"""Draw rainbow that fades across all pixels at once."""
-	#for j in range(256*iterations):
-	for j in range(1):
+	for j in range(256*iterations):
 		for i in range(strip.numPixels()):
 			c = wheel((i+j) & 255)
 			strip.setPixelColor(i, c)
@@ -107,9 +106,7 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 
-
 	rainbow(strip)
-	exit()
 
 	print ('Press Ctrl-C to quit.')
 	while True:
