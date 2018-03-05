@@ -1,6 +1,8 @@
 import math
 import datetime 
 import time
+import os
+import errno
 from neopixel import *
 
 start = datetime.datetime.now()
@@ -37,13 +39,33 @@ def color_run(start_color, end_color, step_count, inclusive=True, to_color=True)
     return run
 
 
-print ('Color merging ...')
-colors = color_run((255,0,0), (0, 212, 255), 200)
-print colors
+def colorMerging():
+    print ('Color merging ...')
+    colors = color_run((255,0,0), (0, 212, 255), 200)
+    print colors
 
 
-#while True:
-#    elapsed_ms = (datetime.datetime.now() - start) .total_seconds() * 1000
-#    brightness = int((math.exp(math.sin(elapsed_ms/2000.0*math.pi)) - 0.36787944) * 108.0)
-#    print (brightness)
-#    time.sleep(0.01)
+def pipetest():
+    print ('Begining pipetest function ...')
+    bufferSize = 100
+    PATH = "/tmp/lights"
+    while True:
+        try:
+            pipe = os.open(PATH, os.O_RDONLY | os.O_NONBLOCK)
+            input = os.read(pipe,bufferSize)
+        except OSError as err:
+            if err.errno == 11:
+                continue
+            else:
+                raise err
+        if input:
+            print(input)
+    
+        os.close(pipe)
+    
+        #Other functions
+        print "Sleep 500 ms"
+        time.sleep(0.5)
+
+# Call test procedures
+pipetest()
