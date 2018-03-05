@@ -64,7 +64,6 @@ while True:
 
 
     
- if pipe:
-     print 'end .. closing pipe'
-     pipe.close()
-     
+if pipe:
+    print 'end .. closing pipe'
+    pipe.close()
