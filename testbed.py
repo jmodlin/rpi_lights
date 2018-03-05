@@ -47,6 +47,9 @@ def colorMerging():
 
 def pipetest():
     print ('Begining pipetest function ...')
+    try: os.mkfifo('/tmp/lights',0777)
+        except OSError: 
+            print 'error!'
     bufferSize = 100
     PATH = "/tmp/lights"
     while True:
